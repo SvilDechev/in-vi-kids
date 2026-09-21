@@ -1,10 +1,12 @@
-# IN-VI Kids website
+# IN-VI Kids – първа версия с нова структура
 
-Starter static website for GitHub Pages.
-
-Files:
-- index.html
-- style.css
-- logo.png
-
-Next step: upload these files to the `SvilDechev/in-vi-kids` repository and enable GitHub Pages.
+Тази версия запазва по-изчистения дизайн от първия вариант и добавя:
+- меню: Начало / Новини / За нас / Как работим / Какво развиваме / Контакти
+- секция „Новини“
+- секция „Как работим“
+- секция „Как да ни намерите“
+- метро линия 3, метростанция „Театрална“
+- автобуси 11, 213, 404
+- трамваи 20, 21, 22
+- Facebook и Instagram
+- без повтаряне на логото в няколко секции
