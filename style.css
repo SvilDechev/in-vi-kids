@@ -816,7 +816,7 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 100;
+  z-index: 9999;
   transition: transform .2s ease;
 }
 
@@ -953,8 +953,22 @@ footer {
   }
 
   .pillars-grid,
-  .skills-grid {
+  .skills-grid,
+  .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .service-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .pillars {
