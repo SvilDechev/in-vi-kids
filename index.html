@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IN-VI Kids – детска ерготерапия и детско развитие в София. Индивидуален подход, игра, движение и подкрепа за уменията в ежедневието.">
+  <meta name="description"
+    content="IN-VI Kids – детска ерготерапия и детско развитие в София. Индивидуален подход, игра, движение и подкрепа за уменията в ежедневието.">
   <title>IN-VI Kids | Ерготерапия и детско развитие</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-image" src="" alt="">
+</div>
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const image = document.getElementById('lightbox-image');
+
+    image.src = src;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(event) {
+    if (event && event.target.id === 'lightbox-image') return;
+
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+</script>
+
 <body>
 
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="IN-VI Kids - начало">
-        <img src="logo.png" alt="IN-VI Kids">
+        <img src="assets/logo.png" alt="IN-VI Kids">
       </a>
 
-      <nav class="nav" aria-label="Основна навигация">
+      <button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Основна навигация">
         <a href="#top">Начало</a>
-        <a href="#news">Новини</a>
         <a href="#about">За нас</a>
+        <a href="#services">Услуги</a>
         <a href="#how">Как работим</a>
         <a href="#skills">Какво развиваме</a>
+        <a href="#news">Новини</a>
         <a href="#find-us">Контакти</a>
+        <a href="#reviews">Отзиви</a>
       </nav>
 
       <a class="nav-button" href="#find-us">Запази час</a>
     </div>
   </header>
-
+  <button class="back-to-top" id="backToTop" aria-label="Върни ме горе">
+    <img src="assets/cloud-top.png" alt="">
+  </button>
   <main id="top">
     <section class="hero hero-autumn">
       <div class="autumn-decor autumn-decor-one"></div>
@@ -37,11 +78,13 @@
         <div class="hero-intro">
           <p class="eyebrow">ЕРГОТЕРАПИЯ И ДЕТСКО РАЗВИТИЕ</p>
           <h1>Развитие чрез игра, движение и ежедневни умения.</h1>
-          <p class="hero-text">Всяко дете има свой път на развитие. Целта ни е да създадем среда и да подберем подходи, които му дават увереност да изследва света и да разгърне своя потенциал.</p>
+          <p class="hero-text">Всяко дете има свой път на развитие. Целта ни е да създадем среда и да подберем подходи,
+            които му дават увереност да изследва света и да разгърне своя потенциал.</p>
         </div>
         <div class="hero-news">
           <article class="hero-banner">
-            <img src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата">
+            <img src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата"
+              onclick="openLightbox(this.src)">
             <div class="hero-banner-overlay">
               <span>ПРЕДСТОЯЩО</span>
               <h2>Групово занимание сред природата</h2>
@@ -50,7 +93,8 @@
           </article>
 
           <article class="hero-banner">
-            <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври">
+            <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври"
+              onclick="openLightbox(this.src)">
             <div class="hero-banner-overlay">
               <span>АКТУАЛНО</span>
               <h2>Безплатни консултации</h2>
@@ -66,10 +110,80 @@
         <article class="pillar">
           <!-- <div class="pillar-icon">🤲</div> -->
           <h2>Какво е ерготерапия?</h2>
-          <p>Ерготерапията подкрепя детето в уменията, които са му нужни, за да участва по-уверено и самостоятелно в ежедневието – в играта, ученето, самообслужването и общуването.</p>
-          <p>Работим чрез игра, движение и смислени занимания, съобразени с индивидуалните нужди, възрастта и силните страни на всяко дете.</p>
+          <p>Ерготерапията подкрепя детето в уменията, които са му нужни, за да участва по-уверено и самостоятелно в
+            ежедневието – в играта, ученето, самообслужването и общуването.</p>
+          <p>Работим чрез игра, движение и смислени занимания, съобразени с индивидуалните нужди, възрастта и силните
+            страни на всяко дете.</p>
         </article>
       </div>
+      <section class="section about-section" id="about">
+        <div class="container about-card">
+          <div class="about-photo">
+            <img src="assets/ina.jpg" alt="Ина – създател на IN-VI Kids">
+          </div>
+          <div>
+            <p class="section-label">ЗА НАС</p>
+            <h2>Историята на Ина и Влади – детето, което вдъхнови създаването на IN-VI Kids.</h2>
+          </div>
+          <p>
+            IN-VI Kids се роди от личен опит и от вярата, че всяко дете заслужава да бъде разбрано,
+            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
+            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
+            и преживяванията са естествена част от пътя на детето.IN-VI Kids се роди от личен опит и от вярата, че всяко
+            дете заслужава да бъде разбрано,
+            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
+            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
+            и преживяванията са естествена част от пътя на детето.IN-VI Kids се роди от личен опит и от вярата, че всяко
+            дете заслужава да бъде разбрано,
+            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
+            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
+            и преживяванията са естествена част от пътя на детето.
+          </p>
+        </div>
+      </section>
+      <section class="section" id="services">
+        <div class="container">
+          <p class="section-label">УСЛУГИ</p>
+
+          <h2>Как можем да работим заедно?</h2>
+
+          <p class="section-intro">
+            В IN-VI Kids предлагаме занимания, съобразени с индивидуалните потребности,
+            възрастта и целите на всяко дете.
+          </p>
+          <div class="service-grid">
+            <div class="service-card">
+              <h3>Консултация</h3>
+              <p>
+                Среща с родител за обсъждане на развитието на детето,
+                ежедневните предизвикателства и възможните насоки за подкрепа.Среща с родител за обсъждане на развитието на детето,
+                ежедневните предизвикателства и възможните насоки за подкрепа.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>Индивидуална ерготерапевтична сесия</h3>
+              <p>
+                Индивидуална работа с детето, съобразена с неговите нужди,
+                силни страни и конкретни цели. Индивидуална работа с детето, съобразена с неговите нужди,
+                силни страни и конкретни цели. Индивидуална работа с детето, съобразена с неговите нужди,
+                силни страни и конкретни цели.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>Групови занимания</h3>
+              <p>
+                Занимания в малка група, в които чрез игра и преживяване
+                развиваме умения за участие, взаимодействие и самостоятелност. Занимания в малка група, в които чрез игра и преживяване
+                развиваме умения за участие, взаимодействие и самостоятелност. Занимания в малка група, в които чрез игра и преживяване
+                развиваме умения за участие, взаимодействие и самостоятелност.
+              </p>
+            </div>
+
+
+
+          </div>
+        </div>
+      </section>
     </section>
 
     <section class="section" id="how">
@@ -80,27 +194,55 @@
         </div>
         <div>
           <p><strong>Как започваме?</strong></p>
-          <p>Преди да започнем работа, отделяме време да разберем силните страни на детето, какво го затруднява и какви са очакванията на семейството.</p>
+          <p>Преди да започнем работа, отделяме време да разберем силните страни на детето, какво го затруднява и какви
+            са очакванията на семейството.</p>
           <p>След това извършваме оценка на развитието и заедно поставяме ясни и реалистични цели.</p>
-          <p><strong>Няма универсален подход.</strong> Подбираме методите и дейностите според индивидуалните нужди на детето. Ако даден подход не носи желания резултат, променяме метода и търсим нови решения.</p>
+          <p><strong>Няма универсален подход.</strong> Подбираме методите и дейностите според индивидуалните нужди на
+            детето. Ако даден подход не носи желания резултат, променяме метода и търсим нови решения.</p>
         </div>
       </div>
     </section>
+
 
     <section class="section skills-section" id="skills">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">КАКВО РАЗВИВАМЕ</p>
-          <h2>Умения, които помагат на детето да участва по-пълноценно в своя живот</h2>
+          <h2>Умения, които помагат на детето да участва<br>
+              по-пълноценно в своя живот
+          </h2>
         </div>
 
         <div class="skills-grid">
-          <article class="skill"><span></span><h3>Фина моторика</h3><p>Фината моторика включва малките, прецизни движения на ръцете и пръстите, които детето използва, за да играе, твори и се справя с ежедневните задачи. Тя е важна за дейности като рисуване, оцветяване, рязане с ножица, лепене, нанизване, закопчаване на копчета, използване на прибори и писане.</p></article>
-          <article class="skill"><span></span><h3>Груба моторика</h3><p>Включва уменията, с които се използват големите мускулни групи на тялото. Тя е в основата на много от ежедневните дейности на детето – ходене, бягане, катерене, хвърляне и хващане топка, равновесие и баланс. Увереност в движението в различна среда.</p></article>
-          <article class="skill"><span></span><h3>Сензорна интеграция</h3><p>Децата получават огромно количество информация чрез своите сетива – докосване, движение, звук, зрение, мирис и усещането за позицията на тялото. Понякога тази информация може да бъде трудна за обработване.</p></article>
-          <article class="skill"><span></span><h3>Самостоятелност</h3><p>Умения за самообслужване и участие в ежедневни дейности.</p></article>
-          <article class="skill"><span></span><h3>Графомоторни умения</h3><p>Подготовка и подкрепа за писане, рисуване и работа на маса.</p></article>
-          <article class="skill"><span></span><h3>Подготовка за училище</h3><p>Умения за участие, следване на инструкции и изпълнение на задачи.</p></article>
+          <article class="skill"><span></span>
+            <h3>Фина моторика</h3>
+            <p>Фината моторика включва малките, прецизни движения на ръцете и пръстите, които детето използва, за да
+              играе, твори и се справя с ежедневните задачи. Тя е важна за дейности като рисуване, оцветяване, рязане с
+              ножица, лепене, нанизване, закопчаване на копчета, използване на прибори и писане.</p>
+          </article>
+          <article class="skill"><span></span>
+            <h3>Груба моторика</h3>
+            <p>Включва уменията, с които се използват големите мускулни групи на тялото. Тя е в основата на много от
+              ежедневните дейности на детето – ходене, бягане, катерене, хвърляне и хващане топка, равновесие и баланс.
+              Увереност в движението в различна среда.</p>
+          </article>
+          <article class="skill"><span></span>
+            <h3>Сензорна интеграция</h3>
+            <p>Децата получават огромно количество информация чрез своите сетива – докосване, движение, звук, зрение,
+              мирис и усещането за позицията на тялото. Понякога тази информация може да бъде трудна за обработване.</p>
+          </article>
+          <article class="skill"><span></span>
+            <h3>Самостоятелност</h3>
+            <p>Умения за самообслужване и участие в ежедневни дейности.</p>
+          </article>
+          <article class="skill"><span></span>
+            <h3>Графомоторни умения</h3>
+            <p>Подготовка и подкрепа за писане, рисуване и работа на маса.</p>
+          </article>
+          <article class="skill"><span></span>
+            <h3>Подготовка за училище</h3>
+            <p>Умения за участие, следване на инструкции и изпълнение на задачи.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -115,14 +257,18 @@
         <div class="news-grid">
           <article class="news-card" id="news-event">
             <div class="news-banner-wrap">
-              <img src="assets/event-autumn.png" alt="Есенно групово занимание сред природата">
+              <img src="assets/event-autumn.png" alt="Есенно групово занимание сред природата"
+                onclick="openLightbox(this.src)">
             </div>
             <div class="news-body">
               <p class="news-tag">Предстоящо</p>
               <!-- <h3>Есента е красивият и цветен сезон за игри!</h3> -->
-              <p>Изнесено терапевтично групово занимание сред природата, в което движението, играта и творчеството се срещат.</p>
+              <p>Изнесено терапевтично групово занимание сред природата, в което движението, играта и творчеството се
+                срещат.</p>
               <div class="news-details" id="news-event-details" hidden>
-                <p>Каним децата на специално групово занимание сред природата. Чрез разнообразни дейности с естествени материали ще изследваме, ще създаваме, ще общуваме и ще развиваме важни умения по естествен и забавен начин.</p>
+                <p>Каним децата на специално групово занимание сред природата. Чрез разнообразни дейности с естествени
+                  материали ще изследваме, ще създаваме, ще общуваме и ще развиваме важни умения по естествен и забавен
+                  начин.</p>
                 <ul>
                   <li>Двигателни игри и предизвикателства с естествени елементи</li>
                   <li>Творчески дейности с листа, шишарки, клонки, кори и други природни материали</li>
@@ -130,70 +276,103 @@
                   <li>Задачи за внимание, планиране и следване на инструкции</li>
                   <li>Игри за общуване, взаимопомощ и участие в група</li>
                 </ul>
-                <p><strong>Място:</strong> парк „Борисова градина“<br><strong>Дата:</strong> ще бъде обявена според прогнозата за времето<br><strong>Продължителност:</strong> около 60–90 мин.<br><strong>Участие:</strong> с предварително записване.</p>
+                <p><strong>Място:</strong> парк „Борисова градина“<br><strong>Дата:</strong> ще бъде обявена според
+                  прогнозата за времето<br><strong>Продължителност:</strong> около 60–90
+                  мин.<br><strong>Участие:</strong> с предварително записване.</p>
               </div>
-<button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-event-details">Научи повече <span>↓</span></button>
+              <button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-event-details">Научи
+                повече <span>↓</span></button>
             </div>
           </article>
 
           <article class="news-card" id="news-consultations">
             <div class="news-banner-wrap">
-              <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври">
+              <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври"
+                onclick="openLightbox(this.src)">
             </div>
             <div class="news-body">
               <p class="news-tag">Актуално</p>
               <h3>Безплатни консултации през септември и октомври</h3>
               <p>В началото на учебната година IN-VI Kids предлага възможност за безплатна консултация.</p>
               <div class="news-details" id="news-consultations-details" hidden>
-                <p>Консултацията е възможност да споделите какво ви затруднява в ежедневието и да обсъдим дали ерготерапията би била подходяща за вашето дете.</p>
+                <p>Консултацията е възможност да споделите какво ви затруднява в ежедневието и да обсъдим дали
+                  ерготерапията би била подходяща за вашето дете.</p>
                 <p>Подходящо за деца в ранна детска възраст, детска градина и училищна възраст.</p>
                 <p><strong>За записване:</strong> свържете се с IN-VI Kids по телефон или имейл.</p>
                 <p><a class="inline-contact-link" href="#find-us">Виж контакти и как да ни намерите →</a></p>
               </div>
-<button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-consultations-details">Научи повече <span>↓</span></button>
+              <button class="news-toggle" type="button" aria-expanded="false"
+                aria-controls="news-consultations-details">Научи повече <span>↓</span></button>
             </div>
           </article>
 
           <article class="news-card" id="news-development">
-            <div class="news-visual news-nature"><img src="assets/what-is-ergo.png" alt="Дете в занимание в IN-VI Kids"></div>
+            <div class="news-visual news-nature"><img src="assets/what-is-ergo.png" alt="Дете в занимание в IN-VI Kids"
+                onclick="openLightbox(this.src)"></div>
             <div class="news-body">
               <p class="news-tag">Полезно</p>
               <h3>Какво всъщност развиваме в ерготерапията?</h3>
               <p>Не работим само за едно умение. Работим за участието на детето в неговия живот.</p>
               <div class="news-details" id="news-development-details" hidden>
-                <p>Фината и грубата моторика, балансът и координацията, вниманието, моторното планиране, сензорната преработка, зрително-моторната координация, социалните умения и самостоятелността са умения, които имат смисъл, когато помагат на детето да участва по-уверено в ежедневието.</p>
-                <p>Терапията започва в кабинета, но промяната се случва всеки ден – у дома, в детската градина, в училище, в играта и в реалните преживявания.</p>
+                <p>Фината и грубата моторика, балансът и координацията, вниманието, моторното планиране, сензорната
+                  преработка, зрително-моторната координация, социалните умения и самостоятелността са умения, които
+                  имат смисъл, когато помагат на детето да участва по-уверено в ежедневието.</p>
+                <p>Терапията започва в кабинета, но промяната се случва всеки ден – у дома, в детската градина, в
+                  училище, в играта и в реалните преживявания.</p>
                 <p><a class="inline-contact-link" href="#skills">Виж какво развиваме →</a></p>
               </div>
-<button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-development-details">Научи повече <span>↓</span></button>
+              <button class="news-toggle" type="button" aria-expanded="false"
+                aria-controls="news-development-details">Научи повече <span>↓</span></button>
             </div>
           </article>
         </div>
       </div>
     </section>
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <p class="section-label">ОТЗИВИ ОТ РОДИТЕЛИ</p>
 
-    <section class="section about-section" id="about">
-      <div class="container about-card">
-        <div>
-          <p class="section-label">ЗА НАС</p>
-          <h2>Историята на Ина и Влади – детето, което вдъхнови създаването на IN-VI Kids.</h2>
-        </div>
+    <h2>
+      Думите на родителите са най-ценната обратна връзка за нас.
+    </h2>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
         <p>
-          IN-VI Kids се роди от личен опит и от вярата, че всяко дете заслужава да бъде разбрано,
-          подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
-          надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
-          и преживяванията са естествена част от пътя на детето.
+          Тук ще бъде реалният отзив от родител.
         </p>
+        <span>— Родител на дете</span>
       </div>
-    </section>
 
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>
+          Тук ще бъде реалният отзив от родител.
+        </p>
+        <span>— Родител на дете</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>
+          Тук ще бъде реалният отзив от родител.
+        </p>
+        <span>— Родител на дете</span>
+      </div>
+
+    </div>
+  </div>
+</section>
     <section class="contact-section" id="find-us">
       <div class="container contact-grid">
         <div>
           <p class="section-label">КАК ДА НИ НАМЕРИТЕ</p>
-          <h2>IN-VI Kids е до метростанция „Театрална“.</h2>
-          <p>Намираме се на ул. „проф. Милко Бичев“ 1, София — в непосредствена близост до метростанция „Театрална“.</p>
+          <h2>IN-VI Kids се намира до метростанция „Театрална“.</h2>
+          <p>Ще ни намерите на ул. „проф. Милко Бичев“ 1, София — в непосредствена близост до парк Заимов.</p>
           <div class="transport">
+            <h2>Как да стигна:</h2>
             <div><strong>🚇 Метро</strong><span>Линия 3 · метростанция „Театрална“</span></div>
             <div><strong>🚌 Автобуси</strong><span>11 · 213 · 404</span></div>
             <div><strong>🚋 Трамваи</strong><span>20 · 21 · 22</span></div>
@@ -210,22 +389,47 @@
           </div>
           <div class="contact-actions">
             <a class="button button-light" href="tel:+359895471752">Обади се</a>
-            <a class="button button-outline-light" href="https://www.google.com/maps/search/?api=1&query=ул.+проф.+Милко+Бичев+1,+София" target="_blank" rel="noopener">Отвори карта</a>
+            <a class="button button-outline-light"
+              href="https://www.google.com/maps/search/?api=1&query=ул.+проф.+Милко+Бичев+1,+София" target="_blank"
+              rel="noopener">Отвори карта</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+
   <script>
-    document.querySelectorAll('.news-toggle').forEach(function(button) {
-      button.addEventListener('click', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.classList.toggle('is-open', !isOpen);
+        mainNav.classList.toggle('is-open', !isOpen);
+      });
+
+      mainNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.classList.remove('is-open');
+          mainNav.classList.remove('is-open');
+        });
+      });
+    }
+  </script>
+
+  <script>
+    document.querySelectorAll('.news-toggle').forEach(function (button) {
+      button.addEventListener('click', function () {
         const card = button.closest('.news-card');
         const details = document.getElementById(button.getAttribute('aria-controls'));
         const isOpen = button.getAttribute('aria-expanded') === 'true';
 
         // Close the other news items so only one is expanded at a time.
-        document.querySelectorAll('.news-toggle').forEach(function(otherButton) {
+        document.querySelectorAll('.news-toggle').forEach(function (otherButton) {
           if (otherButton !== button) {
             otherButton.setAttribute('aria-expanded', 'false');
             otherButton.innerHTML = 'Научи повече <span>↓</span>';
@@ -252,8 +456,8 @@
 
     // Links from the hero banners open the relevant news item instead of
     // jumping to an unrelated section.
-    document.querySelectorAll('.hero-banner a[href^="#news"]').forEach(function(link) {
-      link.addEventListener('click', function(event) {
+    document.querySelectorAll('.hero-banner a[href^="#news"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
         event.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (!target) return;
@@ -262,8 +466,26 @@
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
-  </script>
+    const backToTop = document.getElementById('backToTop');
 
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.site-header');
+      const headerHeight = header.offsetHeight;
+
+      if (window.scrollY > headerHeight) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
   <footer>
     <div class="container footer-wrap">
       <span>© IN-VI Kids</span>
@@ -272,4 +494,5 @@
   </footer>
 
 </body>
+
 </html>
