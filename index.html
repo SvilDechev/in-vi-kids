@@ -37,36 +37,12 @@
   }
   </script>
 </head>
-<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-image" src="" alt="">
-</div>
-
-<script>
-  function openLightbox(src) {
-    const lightbox = document.getElementById('lightbox');
-    const image = document.getElementById('lightbox-image');
-
-    image.src = src;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox(event) {
-    if (event && event.target.id === 'lightbox-image') return;
-
-    document.getElementById('lightbox').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closeLightbox();
-    }
-  });
-</script>
 
 <body>
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Затвори изображението">✕</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
 
   <header class="site-header">
     <div class="container nav-wrap">
@@ -84,16 +60,17 @@
         <a href="#top">Начало</a>
         <a href="#about">За нас</a>
         <a href="#services">Услуги</a>
-        <a href="#how">Как работим</a>
+        <a href="#how">В какво вярваме</a>
         <a href="#skills">Какво развиваме</a>
         <a href="#news">Новини</a>
-        <a href="#find-us">Контакти</a>
         <a href="#reviews">Отзиви</a>
+        <a href="#find-us">Контакти</a>
       </nav>
 
       <a class="nav-button" href="#find-us">Запази час</a>
     </div>
   </header>
+
   <button class="back-to-top" id="backToTop" aria-label="Върни ме горе">
     <img src="assets/cloud-top.png" alt="">
   </button>
@@ -106,13 +83,14 @@
         <div class="hero-intro">
           <p class="eyebrow">ЕРГОТЕРАПИЯ И ДЕТСКО РАЗВИТИЕ</p>
           <h1>Развитие чрез игра, движение и ежедневни умения.</h1>
-          <p class="hero-text">Всяко дете има свой път на развитие. Целта ни е да създадем среда и да подберем подходи,
+          <p class="hero-text">Всяко дете има свой път на развитие. Целта ни е да създадем
+            среда и да подберем подходи,
             които му дават увереност да изследва света и да разгърне своя потенциал.</p>
         </div>
         <div class="hero-news">
           <article class="hero-banner">
-            <img src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата"
-              onclick="openLightbox(this.src)">
+            <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата"
+              tabindex="0" role="button">
             <div class="hero-banner-overlay">
               <span>ПРЕДСТОЯЩО</span>
               <h2>Групово занимание сред природата</h2>
@@ -121,8 +99,8 @@
           </article>
 
           <article class="hero-banner">
-            <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври"
-              onclick="openLightbox(this.src)">
+            <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+              alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
             <div class="hero-banner-overlay">
               <span>АКТУАЛНО</span>
               <h2>Безплатни консултации</h2>
@@ -136,88 +114,79 @@
     <section class="pillars">
       <div class="container pillars-grid pillars-single">
         <article class="pillar">
-          <!-- <div class="pillar-icon">🤲</div> -->
           <h2>Какво е ерготерапия?</h2>
           <p>Ерготерапията подкрепя детето в уменията, които са му нужни, за да участва по-уверено и самостоятелно в
             ежедневието – в играта, ученето, самообслужването и общуването.</p>
-          <p>Работим чрез игра, движение и смислени занимания, съобразени с индивидуалните нужди, възрастта и силните
+          <p>Работим чрез игра, движение и занимания, съобразени с индивидуалните нужди, възрастта и силните
             страни на всяко дете.</p>
         </article>
       </div>
-      <section class="section about-section" id="about">
-        <div class="container about-card">
-          <div class="about-photo">
-            <img src="assets/ina.jpg" alt="Ина – създател на IN-VI Kids">
-          </div>
-          <div>
-            <p class="section-label">ЗА НАС</p>
-            <h2>Историята на Ина и Влади – детето, което вдъхнови създаването на IN-VI Kids.</h2>
-          </div>
-          <p>
-            IN-VI Kids се роди от личен опит и от вярата, че всяко дете заслужава да бъде разбрано,
-            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
-            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
-            и преживяванията са естествена част от пътя на детето.IN-VI Kids се роди от личен опит и от вярата, че всяко
-            дете заслужава да бъде разбрано,
-            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
-            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
-            и преживяванията са естествена част от пътя на детето.IN-VI Kids се роди от личен опит и от вярата, че всяко
-            дете заслужава да бъде разбрано,
-            подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
-            надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
-            и преживяванията са естествена част от пътя на детето.
-          </p>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-card">
+
+        <div class="about-photo">
+          <img src="assets/ina.jpg" alt="Ина – създател на IN-VI Kids">
+
+          <video id="about-video" controls muted playsinline
+            aria-label="Ина и Влади – историята зад създаването на IN-VI Kids">
+            <source src="assets/ergo-vladi.mp4" type="video/mp4">
+            Вашият браузър не поддържа видео.
+          </video>
+
+          <img src="assets/ina-vladi.png" alt="Ина и Влади – историята зад създаването на IN-VI Kids">
         </div>
-      </section>
-      <section class="section" id="services">
-        <div class="container">
-          <p class="section-label">УСЛУГИ</p>
-
-          <h2>Как можем да работим заедно?</h2>
-
-          <p class="section-intro">
-            В IN-VI Kids предлагаме занимания, съобразени с индивидуалните потребности,
-            възрастта и целите на всяко дете.
-          </p>
-          <div class="service-grid">
-            <div class="service-card">
-              <h3>Консултация</h3>
-              <p>
-                Среща с родител за обсъждане на развитието на детето,
-                ежедневните предизвикателства и възможните насоки за подкрепа.Среща с родител за обсъждане на развитието на детето,
-                ежедневните предизвикателства и възможните насоки за подкрепа.
-              </p>
-            </div>
-            <div class="service-card">
-              <h3>Индивидуална ерготерапевтична сесия</h3>
-              <p>
-                Индивидуална работа с детето, съобразена с неговите нужди,
-                силни страни и конкретни цели. Индивидуална работа с детето, съобразена с неговите нужди,
-                силни страни и конкретни цели. Индивидуална работа с детето, съобразена с неговите нужди,
-                силни страни и конкретни цели.
-              </p>
-            </div>
-            <div class="service-card">
-              <h3>Групови занимания</h3>
-              <p>
-                Занимания в малка група, в които чрез игра и преживяване
-                развиваме умения за участие, взаимодействие и самостоятелност. Занимания в малка група, в които чрез игра и преживяване
-                развиваме умения за участие, взаимодействие и самостоятелност. Занимания в малка група, в които чрез игра и преживяване
-                развиваме умения за участие, взаимодействие и самостоятелност.
-              </p>
-            </div>
-
-
-
+        <div>
+          <p class="section-label">ЗА НАС</p>
+          <h2>Историята на Ина и Влади – детето, което вдъхнови <br>създаването на IN-VI Kids.</h2>
+        </div>
+        <p>
+          IN-VI Kids се роди от личен опит и от вярата, че всяко дете заслужава да бъде разбрано,
+          подкрепено и прието такова, каквото е. Ина е дипломиран ерготерапевт и непрекъснато
+          надгражда знанията си. Вярваме, че развитието не е състезание и че играта, движението
+          и преживяванията са естествена част от пътя на детето.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="container">
+        <p class="section-label">УСЛУГИ</p>
+        <h2>Как можем да работим заедно?</h2>
+        <p class="section-intro">
+          В IN-VI Kids предлагаме занимания, съобразени с индивидуалните потребности,
+          възрастта и целите на всяко дете.
+        </p>
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>Консултация</h3>
+            <p>
+              Среща с родител за обсъждане на развитието на детето,
+              ежедневните предизвикателства и възможните насоки за подкрепа.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Индивидуална ерготерапевтична сесия</h3>
+            <p>
+              Индивидуална работа с детето, съобразена с неговите нужди,
+              силни страни и конкретни цели.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Групови занимания</h3>
+            <p>
+              Занимания в малка група, в които чрез игра и преживяване
+              развиваме умения за участие, взаимодействие и самостоятелност.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
     </section>
 
     <section class="section" id="how">
       <div class="container two-col">
         <div>
-          <p class="section-label">КАК РАБОТИМ</p>
+          <p class="section-label">Вярваме че:</p>
           <h2>Терапията трябва да бъде съобразена с детето, а не детето с терапията.</h2>
         </div>
         <div>
@@ -237,37 +206,37 @@
         <div class="section-heading">
           <p class="section-label">КАКВО РАЗВИВАМЕ</p>
           <h2>Умения, които помагат на детето да участва<br>
-              по-пълноценно в своя живот
+            по-пълноценно в своя живот
           </h2>
         </div>
 
         <div class="skills-grid">
-          <article class="skill"><span></span>
+          <article class="skill skill-paint">
             <h3>Фина моторика</h3>
             <p>Фината моторика включва малките, прецизни движения на ръцете и пръстите, които детето използва, за да
               играе, твори и се справя с ежедневните задачи. Тя е важна за дейности като рисуване, оцветяване, рязане с
               ножица, лепене, нанизване, закопчаване на копчета, използване на прибори и писане.</p>
           </article>
-          <article class="skill"><span></span>
+          <article class="skill skill-floor">
             <h3>Груба моторика</h3>
             <p>Включва уменията, с които се използват големите мускулни групи на тялото. Тя е в основата на много от
               ежедневните дейности на детето – ходене, бягане, катерене, хвърляне и хващане топка, равновесие и баланс.
               Увереност в движението в различна среда.</p>
           </article>
-          <article class="skill"><span></span>
+          <article class="skill skill-sensory">
             <h3>Сензорна интеграция</h3>
             <p>Децата получават огромно количество информация чрез своите сетива – докосване, движение, звук, зрение,
               мирис и усещането за позицията на тялото. Понякога тази информация може да бъде трудна за обработване.</p>
           </article>
-          <article class="skill"><span></span>
+          <article class="skill skill-day-work">
             <h3>Самостоятелност</h3>
             <p>Умения за самообслужване и участие в ежедневни дейности.</p>
           </article>
-          <article class="skill"><span></span>
+          <article class="skill skill-paint">
             <h3>Графомоторни умения</h3>
             <p>Подготовка и подкрепа за писане, рисуване и работа на маса.</p>
           </article>
-          <article class="skill"><span></span>
+          <article class="skill skill-school">
             <h3>Подготовка за училище</h3>
             <p>Умения за участие, следване на инструкции и изпълнение на задачи.</p>
           </article>
@@ -285,12 +254,11 @@
         <div class="news-grid">
           <article class="news-card" id="news-event">
             <div class="news-banner-wrap">
-              <img src="assets/event-autumn.png" alt="Есенно групово занимание сред природата"
-                onclick="openLightbox(this.src)">
+              <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Есенно групово занимание сред природата"
+                tabindex="0" role="button">
             </div>
             <div class="news-body">
               <p class="news-tag">Предстоящо</p>
-              <!-- <h3>Есента е красивият и цветен сезон за игри!</h3> -->
               <p>Изнесено терапевтично групово занимание сред природата, в което движението, играта и творчеството се
                 срещат.</p>
               <div class="news-details" id="news-event-details" hidden>
@@ -315,8 +283,8 @@
 
           <article class="news-card" id="news-consultations">
             <div class="news-banner-wrap">
-              <img src="assets/free-consultations.jpg" alt="Безплатни консултации през септември и октомври"
-                onclick="openLightbox(this.src)">
+              <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+                alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
             </div>
             <div class="news-body">
               <p class="news-tag">Актуално</p>
@@ -335,8 +303,8 @@
           </article>
 
           <article class="news-card" id="news-development">
-            <div class="news-visual news-nature"><img src="assets/what-is-ergo.png" alt="Дете в занимание в IN-VI Kids"
-                onclick="openLightbox(this.src)"></div>
+            <div class="news-visual news-nature"><img class="lightbox-trigger" src="assets/what-is-ergo.png"
+                alt="Дете в занимание в IN-VI Kids" tabindex="0" role="button"></div>
             <div class="news-body">
               <p class="news-tag">Полезно</p>
               <h3>Какво всъщност развиваме в ерготерапията?</h3>
@@ -356,59 +324,51 @@
         </div>
       </div>
     </section>
-<section class="section reviews-section" id="reviews">
-  <div class="container reviews-content">
+    <section class="section reviews-section" id="reviews">
+      <div class="container reviews-content">
+        <p class="section-label">ОТЗИВИ ОТ РОДИТЕЛИ</p>
+        <h2>Думите на родителите са <br>
+          най-ценната обратна връзка за нас.</h2>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>
+              Човек, който работи от сърце и с мисия в подкрепа на децата. Личната ѝ кауза личи във всичко, което прави,
+              и ѝ дава енергията, която всеки специалист в тази област трябва да притежава!
+            </p>
+            <span>— Свилен Дечев</span>
+            <a class="review-google-link" href="https://share.google/Uc4KkZx5M30qCc33X" target="_blank" rel="noopener">
+              <br>Виж отзива в Google →
+            </a>
+          </div>
 
-    <p class="section-label">ОТЗИВИ ОТ РОДИТЕЛИ</p>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>
+              „Харесва ни, че заниманията са съобразени с детето и неговото
+              темпо. Виждаме малките промени и това ни дава увереност.“
+            </p>
+            <span>— От майката на Вальо</span>
+          </div>
 
-    <h2>Думите на родителите са най-ценната обратна връзка за нас.</h2>
-
-    <div class="reviews-grid">
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>
-          „Още от първите занимания усетихме индивидуалния подход и
-          вниманието към детето. Всичко се случва с много игра,
-          спокойствие и разбиране.“
-        </p>
-        <span>— Родител на Влади</span>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p>
+              „За нас е важно, че терапията не е просто упражнения,
+              а възможност детето да се развива чрез игра и реални преживявания.“
+            </p>
+            <span> — Роси</span>
+          </div>
+        </div>
+        <div class="reviews-invite">
+          <p>Искате да споделите своя опит с IN-VI Kids?</p>
+          <a class="google-review-button" href="https://g.page/r/Cda5s3u3iZr2EAE/review" target="_blank" rel="noopener">
+            <span class="google-star">★</span>
+            Остави отзив в Google
+          </a>
+        </div>
       </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>
-          „Харесва ни, че заниманията са съобразени с детето и неговото
-          темпо. Виждаме малките промени и това ни дава увереност.“
-        </p>
-        <span>— От майката на Вальо</span>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>
-          „За нас е важно, че терапията не е просто упражнения,
-          а възможност детето да се развива чрез игра и реални преживявания.“
-        </p>
-        <span> — Родител на Зара</span>
-      </div>
-
-    </div>
-
-    <div class="reviews-invite">
-      <p>Искате да споделите своя опит с IN-VI Kids?</p>
-      <a
-        class="google-review-button"
-        href="https://g.page/r/Cda5s3u3iZr2EAE/review"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="google-star">★</span>
-        Остави отзив в Google
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
     <section class="contact-section" id="find-us">
       <div class="container contact-grid">
         <div>
@@ -432,10 +392,13 @@
             <a href="https://www.instagram.com/in_vi_kids/" target="_blank" rel="noopener">Instagram</a>
           </div>
           <div class="contact-actions">
-            <a class="button button-light" href="tel:+359895471752">Обади се</a>
-            <a class="button button-outline-light"
-              href="https://www.google.com/maps/search/?api=1&query=ул.+проф.+Милко+Бичев+1,+София" target="_blank"
-              rel="noopener">Отвори карта</a>
+            <a class="button button-light" href="tel:+359895471752">
+              Обади се
+            </a>
+            <a class="button button-outline-light" href="https://maps.app.goo.gl/CzNHqGMBy2yx5gWM7" target="_blank"
+              rel="noopener">
+              Отвори карта
+            </a>
           </div>
         </div>
       </div>
@@ -444,10 +407,76 @@
 
 
   <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const image = document.getElementById('lightbox-image');
+
+      image.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+      if (event && event.target.id === 'lightbox-image') return;
+
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    document.getElementById('lightbox').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-close').addEventListener('click', function (event) {
+      event.stopPropagation();
+      closeLightbox();
+    });
+
+    document.querySelectorAll('.lightbox-trigger').forEach(function (image) {
+      image.addEventListener('click', function () {
+        openLightbox(image.src);
+      });
+
+      image.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(image.src);
+        }
+      });
+    });
+
+    const aboutVideo = document.getElementById('about-video');
+
+    if (aboutVideo && 'IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            if (aboutVideo.ended) aboutVideo.currentTime = 0;
+            aboutVideo.play().catch(function () {
+              // The browser may block autoplay until the user interacts.
+            });
+          } else {
+            aboutVideo.pause();
+          }
+        });
+      }, { threshold: 0.6 });
+
+      videoObserver.observe(aboutVideo);
+    }
+
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
     if (menuToggle && mainNav) {
+      function closeMenu() {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('is-open');
+        mainNav.classList.remove('is-open');
+      }
+
       menuToggle.addEventListener('click', function () {
         const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', String(!isOpen));
@@ -455,11 +484,17 @@
         mainNav.classList.toggle('is-open', !isOpen);
       });
 
+      document.addEventListener('click', function (event) {
+        const clickedInsideMenu = mainNav.contains(event.target) || menuToggle.contains(event.target);
+
+        if (!clickedInsideMenu) {
+          closeMenu();
+        }
+      });
+
       mainNav.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
-          menuToggle.setAttribute('aria-expanded', 'false');
-          menuToggle.classList.remove('is-open');
-          mainNav.classList.remove('is-open');
+          closeMenu();
         });
       });
     }
