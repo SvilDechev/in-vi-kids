@@ -5,10 +5,7 @@
   --turquoise-light: #dff6fa;
   --navy: #23465d;
   --cream: #f8f3ea;
-  --green: #718b57;
-  --orange: #e87528;
   --text: #294457;
-  --white: #ffffff;
   --shadow: 0 16px 45px rgba(35, 70, 93, .10);
 }
 
@@ -195,24 +192,6 @@ a {
 .hero-text {
   max-width: 650px;
   font-size: 1.35rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.button-primary {
-  background: var(--turquoise);
-  color: white;
-  box-shadow: var(--shadow);
-}
-
-.button-secondary {
-  border: 2px solid var(--navy);
-  color: var(--navy);
 }
 
 /* Autumn hero */
@@ -473,12 +452,6 @@ a {
     url("assets/floor.jpg") center / cover no-repeat;
 }
 
-.skill-paint {
-  background:
-    linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/paint.jpg") center / cover no-repeat;
-}
-
 .skill-sensory {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
@@ -563,14 +536,6 @@ a {
 .news-visual img {
   height: 100%;
   object-fit: cover;
-}
-
-.news-autumn {
-  background: linear-gradient(135deg, #f3dfc5, #e9c79d);
-}
-
-.news-play {
-  background: linear-gradient(135deg, #dff6fa, #c8e9e5);
 }
 
 .news-nature {
@@ -986,7 +951,6 @@ footer {
     padding: 50px 0 65px;
   }
 
-  .hero-grid,
   .two-col,
   .about-card,
   .contact-grid {
@@ -1004,10 +968,6 @@ footer {
 
   .hero-banner img {
     aspect-ratio: 16 / 9;
-  }
-
-  .hero-visual {
-    min-height: 390px;
   }
 
   .pillars-grid,
@@ -1129,19 +1089,6 @@ footer {
     font-size: 1rem;
   }
 
-  .hero-visual {
-    min-height: 320px;
-  }
-
-  .hero-circle {
-    border-width: 11px;
-  }
-
-  .floating-card {
-    font-size: .85rem;
-    padding: 9px 13px;
-  }
-
   .back-to-top {
     right: 14px;
     bottom: 14px;
@@ -1201,12 +1148,6 @@ footer {
 
 .reviews-content h2 {
   margin-bottom: 18px;
-}
-
-.reviews-text {
-  max-width: 620px;
-  margin: 0 auto 28px;
-  font-size: 1.08rem;
 }
 
 .google-review-button {
