@@ -550,15 +550,17 @@
       });
     });
 
-    document.querySelectorAll('.review-toggle').forEach(function (button) {
-      button.addEventListener('click', function () {
-        const card = button.closest('.review-card');
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    document.addEventListener('click', function (event) {
+      const button = event.target.closest('.review-toggle');
+      if (!button) return;
 
-        button.setAttribute('aria-expanded', String(!isExpanded));
-        button.textContent = isExpanded ? 'Виж още' : 'Скрий';
-        card.classList.toggle('is-expanded', !isExpanded);
-      });
+      const card = button.closest('.review-card');
+      if (!card) return;
+
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      button.textContent = isExpanded ? 'Виж още' : 'Скрий';
+      card.classList.toggle('is-expanded', !isExpanded);
     });
 
     // Links from the hero banners open the relevant news item instead of
