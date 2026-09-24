@@ -461,19 +461,25 @@ a {
 .skill-day-work {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/day-work.png") center / cover no-repeat;
+    url("assets/day-work.jpg") center / cover no-repeat;
+}
+
+.skill-motor {
+  background:
+    linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
+    url("assets/motor-skils.png") center / cover no-repeat;
+}
+
+.skill-social {
+  background:
+    linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
+    url("assets/social.png") center / cover no-repeat;
 }
 
 .skill-paint {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
     url("assets/paint.png") center / cover no-repeat;
-}
-
-.skill-school {
-  background:
-    linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/school.png") center / cover no-repeat;
 }
 
 .skill h3 {
@@ -658,9 +664,21 @@ a {
   max-width: 900px;
 }
 
-.about-card > p {
+.about-copy {
   grid-column: 1 / -1;
-  grid-row: 3;
+  grid-row: 2;
+  max-width: 900px;
+  display: grid;
+  gap: 16px;
+}
+
+.about-copy > p,
+.about-copy > h3,
+.about-copy > div {
+  margin: 0;
+}
+
+.about-copy p {
   margin: 0;
   max-width: 920px;
   font-size: 1.05rem;
@@ -671,8 +689,54 @@ a {
   margin-bottom: 8px;
 }
 
-.about-card h2 {
-  margin-bottom: 0;
+.about-story-title {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.about-intro {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--turquoise);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--navy);
+  font-weight: 700;
+  font-family: "Lora", Georgia, serif;
+  font-style: italic;
+}
+
+.about-name {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.about-credentials {
+  margin-top: 4px;
+}
+
+.about-credentials h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.about-qualifications {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.about-qualifications li {
+  margin: 8px 0;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -1329,4 +1393,16 @@ footer {
   font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
+}
+.external-link {
+  color: #1976a8;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.external-link:hover {
+  color: #0d5278;
 }
