@@ -345,13 +345,188 @@ a {
   font-size: .9rem;
 }
 
+.social-highlights {
+  padding: 58px 0 72px;
+  background: #fff;
+}
+
+.social-highlights-heading {
+  margin-bottom: 28px;
+}
+
+.social-highlights-heading .section-label {
+  margin: 0 0 6px;
+}
+
+.social-highlights-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.social-post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.social-post {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #f8f3ea;
+  border: 1px solid rgba(35, 70, 93, .10);
+  border-radius: 18px;
+}
+
+.facebook-embed-wrap {
+  width: min(100%, 420px);
+  margin: 8px auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(35, 70, 93, .12);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(35, 70, 93, .08);
+}
+
+.facebook-embed-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 620px;
+  border: 0;
+}
+
+.instagram-embed-wrap {
+  width: min(100%, 420px);
+  height: 700px;
+  margin: 8px auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(35, 70, 93, .12);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(35, 70, 93, .08);
+}
+
+.instagram-embed-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.social-post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 210px;
+  padding: 20px;
+}
+
+.social-post-content-facebook {
+  flex: 1;
+  justify-content: flex-end;
+  min-height: 0;
+}
+
+.social-post-content-facebook > a {
+  margin-top: 0;
+}
+
+.social-post-content-instagram {
+  min-height: 0;
+}
+
+.social-post-content-instagram > a {
+  margin-top: 0;
+}
+
+.social-post-caption-preview {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  margin: 0 0 10px;
+  color: #607582;
+  line-height: 1.5;
+}
+
+.social-post-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #087f9a;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.social-post-platform svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.social-post-platform-instagram {
+  color: #b83280;
+}
+
+.social-post-platform-instagram svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.social-post-platform-instagram .instagram-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-post-platform-facebook {
+  color: #1877f2;
+}
+
+.social-post-platform-facebook svg {
+  fill: currentColor;
+}
+
+.social-post h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.social-post p {
+  margin: 0 0 16px;
+  color: #607582;
+}
+
+.social-post a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: #087f9a;
+  font-weight: 800;
+}
+
+.social-post a:hover {
+  text-decoration: underline;
+}
+
 /* =========================
    INTRO / PILLARS
    ========================= */
 
 .pillars {
   padding: 0 0 32px;
-  margin-top: -35px;
+  margin-top: 0;
   position: relative;
 }
 
@@ -535,12 +710,13 @@ a {
 }
 
 .news-banner-wrap video {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 5 / 7;
   object-fit: cover;
 }
 
 .news-visual {
-  height: 170px;
+  aspect-ratio: 5 / 7;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1006,6 +1182,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .social-post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .transport div {
     flex-direction: column;
     gap: 2px;
@@ -1170,6 +1350,19 @@ footer {
 @media (max-width: 600px) {
   .container {
     width: min(100% - 26px, 1120px);
+  }
+
+  .social-highlights {
+    padding: 44px 0 50px;
+  }
+
+  .social-highlights-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .social-post-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .nav-wrap {
