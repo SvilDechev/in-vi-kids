@@ -306,7 +306,8 @@ a {
   border: 5px solid rgba(255, 255, 255, .9);
 }
 
-.hero-banner img {
+.hero-banner img,
+.hero-banner video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -521,14 +522,21 @@ a {
 }
 
 .news-banner-wrap img,
-.news-visual img {
+.news-visual img,
+.news-banner-wrap video {
   display: block;
   width: 100%;
   cursor: zoom-in;
 }
 
-.news-banner-wrap img {
+.news-banner-wrap img,
+.news-banner-wrap video {
   height: auto;
+}
+
+.news-banner-wrap video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .news-visual {
@@ -1080,7 +1088,8 @@ footer {
     margin-bottom: 30px;
   }
 
-  .hero-banner img {
+  .hero-banner img,
+  .hero-banner video {
     aspect-ratio: 16 / 9;
   }
 

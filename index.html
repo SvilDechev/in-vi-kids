@@ -84,24 +84,39 @@
         </div>
         <div class="hero-news">
           <article class="hero-banner">
+            <video class="hero-banner-video" autoplay muted loop playsinline aria-label="Преживявания сред природата">
+              <source src="assets/autumn-web.mp4" type="video/mp4">
+            </video>
+            <div class="hero-banner-overlay">
+              <span>АКТУАЛНО  </span>
+              <h2>27 ОКТОМВРИ - Световен ден на ерготерапията,
+                Участието има значение!
+              </h2>
+              <a href="#news-occupational-day">Виж повече ↓</a>
+            </div>
+          </article>
+
+          <article class="hero-banner">
             <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата"
               tabindex="0" role="button">
             <div class="hero-banner-overlay">
               <span>ПРЕДСТОЯЩО</span>
               <h2>Групово занимание сред природата</h2>
-              <a href="#news">Виж повече ↓</a>
+              <a href="#news-event">Виж повече ↓</a>
             </div>
           </article>
 
-          <article class="hero-banner">
-            <img class="lightbox-trigger" src="assets/free-consultations.jpg"
-              alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
-            <div class="hero-banner-overlay">
-              <span>АКТУАЛНО</span>
-              <h2>Безплатни консултации</h2>
-              <a href="#find-us">Научи повече ↓</a>
-            </div>
-          </article>
+          <!-- Банерът за безплатните консултации е запазен за бъдещо активиране.
+              <article class="hero-banner">
+                <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+                  alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
+                <div class="hero-banner-overlay">
+                  <span>АКТУАЛНО</span>
+                  <h2>Безплатни консултации</h2>
+                  <a href="#find-us">Научи повече ↓</a>
+                </div>
+              </article>
+          -->
         </div>
       </div>
     </section>
@@ -163,7 +178,8 @@
           </p>
 
           <p>
-            Днес съм дипломиран ерготерапевт с повече от 2 години професионален опит и продължавам да надграждам знанията си чрез специализирани обучения и
+            Днес съм дипломиран ерготерапевт с повече от 2 години професионален опит и продължавам да надграждам
+            знанията си чрез специализирани обучения и
             сертификационни курсове. Като ерготерапевт съм част и от екипа на
             <a href="https://mestenceto.com/" target="_blank" class="external-link">„Местенцето“</a>,
             където работя с деца и техните семейства. За мен всяко дете е различно и именно затова подходът към него
@@ -303,6 +319,26 @@
           <h2>Актуални инициативи и полезни теми.</h2>
         </div>
         <div class="news-grid">
+          <!-- Запазена за бъдещо активиране: <article class="news-card" id="news-consultations">
+            <div class="news-banner-wrap">
+              <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+                alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
+            </div>
+            <div class="news-body">
+              <p class="news-tag">Актуално</p>
+              <h3>Безплатни консултации през септември и октомври</h3>
+              <p>В началото на учебната година IN-VI Kids предлага възможност за безплатна консултация.</p>
+              <div class="news-details" id="news-consultations-details" hidden>
+                <p>Консултацията е възможност да споделите какво ви затруднява в ежедневието и да обсъдим дали
+                  ерготерапията би била подходяща за вашето дете.</p>
+                <p>Подходящо за деца в ранна детска възраст, детска градина и училищна възраст.</p>
+                <p><strong>За записване:</strong> свържете се с IN-VI Kids по телефон или имейл.</p>
+                <p><a class="inline-contact-link" href="#find-us">Виж контакти и как да ни намерите →</a></p>
+              </div>
+              <button class="news-toggle" type="button" aria-expanded="false"
+                aria-controls="news-consultations-details">Научи повече <span>↓</span></button>
+            </div>
+          </article> -->
           <article class="news-card" id="news-event">
             <div class="news-banner-wrap">
               <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Есенно групово занимание сред природата"
@@ -332,24 +368,36 @@
             </div>
           </article>
 
-          <article class="news-card" id="news-consultations">
+          <article class="news-card" id="news-occupational-day">
             <div class="news-banner-wrap">
-              <img class="lightbox-trigger" src="assets/free-consultations.jpg"
-                alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
+              <video class="news-banner-video" autoplay muted loop playsinline controls preload="metadata"
+                aria-label="Видео от IN-VI Kids за Световния ден на ерготерапията">
+                <source src="assets/autumn-web.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="news-body">
               <p class="news-tag">Актуално</p>
-              <h3>Безплатни консултации през септември и октомври</h3>
-              <p>В началото на учебната година IN-VI Kids предлага възможност за безплатна консултация.</p>
-              <div class="news-details" id="news-consultations-details" hidden>
-                <p>Консултацията е възможност да споделите какво ви затруднява в ежедневието и да обсъдим дали
-                  ерготерапията би била подходяща за вашето дете.</p>
-                <p>Подходящо за деца в ранна детска възраст, детска градина и училищна възраст.</p>
-                <p><strong>За записване:</strong> свържете се с IN-VI Kids по телефон или имейл.</p>
-                <p><a class="inline-contact-link" href="#find-us">Виж контакти и как да ни намерите →</a></p>
+              <h3>🌿 27 октомври - Световен ден на ерготерапията</h3>
+              <p><strong>УЧАСТИЕТО ИМА ЗНАЧЕНИЕ. ЖИВЕЙТЕ АКТИВНО!</strong></p>
+              <div class="news-details" id="news-occupational-day-details" hidden>
+                <p>Днес, в Световния ден на ерготерапията, мотото „Участието има значение“ ни провокира да стартираме с
+                  нещо ново в IN-VI Kids — да ви насърчим да излезете от рутината на ежедневието и да откривате нови
+                  места заедно с децата си.</p>
+                <p>Разходките сред природата и посещението на непознати места са чудесен начин да опознаваме света около
+                  нас, да си подаряваме нови преживявания и да създаваме спомени заедно.</p>
+                <p>Терапията е важна подкрепа, но не бива да заема централно място в живота на детето. Тя е част от
+                  пътя.</p>
+                <p>Истинският живот се случва навън — сред природата, в общуването, в срещите с нови хора, места и
+                  предизвикателства.</p>
+                <p>Такива преживявания често изглеждат сложни, изискващи организация и планиране, а всъщност е
+                  достатъчно просто да тръгнем.</p>
+                <p>С тази инициатива искаме да ви вдъхновим да правите крачки извън обичайното ежедневие и да търсите
+                  възможности за децата си да участват в колкото може повече интересни за тях неща.</p>
+                <p>А ние ще споделяме с вас наши подобни преживявания, открития и идеи за повече време навън. 🌿</p>
+                <p><strong>УЧАСТИЕТО ИМА ЗНАЧЕНИЕ. ЖИВЕЙТЕ АКТИВНО!</strong></p>
               </div>
               <button class="news-toggle" type="button" aria-expanded="false"
-                aria-controls="news-consultations-details">Научи повече <span>↓</span></button>
+                aria-controls="news-occupational-day-details">Научи повече <span>↓</span></button>
             </div>
           </article>
           <article class="news-card" id="news-development">
@@ -551,6 +599,24 @@
       }, { threshold: 0.6 });
 
       videoObserver.observe(aboutVideo);
+    }
+
+    const heroVideo = document.querySelector('.hero-banner-video');
+
+    if (heroVideo && 'IntersectionObserver' in window) {
+      const heroVideoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            heroVideo.play().catch(function () {
+              // The browser may block autoplay until the user interacts.
+            });
+          } else {
+            heroVideo.pause();
+          }
+        });
+      }, { threshold: 0.6 });
+
+      heroVideoObserver.observe(heroVideo);
     }
 
     const menuToggle = document.querySelector('.menu-toggle');
