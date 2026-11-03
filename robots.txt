@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://svildechev.github.io/in-vi-kids/sitemap.xml
+Sitemap: https://invi-kids.com/sitemap.xml
