@@ -614,6 +614,7 @@ a {
 }
 
 .adventure-entry-content {
+  scroll-margin-top: 110px;
   padding: 32px 28px 36px;
   background-color: var(--turquoise-light);
   background-image:
@@ -903,7 +904,7 @@ a {
 .pillar {
   background:
     linear-gradient(rgba(255, 255, 255, .60), rgba(255, 255, 255, .60)),
-    url("assets/what-is-ergo1.png");
+    url("assets/what-is-ergo1.webp");
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -984,37 +985,37 @@ a {
 .skill-floor {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/floor.jpg") center / cover no-repeat;
+    url("assets/floor.webp") center / cover no-repeat;
 }
 
 .skill-sensory {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/sensory.jpg") center / cover no-repeat;
+    url("assets/sensory.webp") center / cover no-repeat;
 }
 
 .skill-day-work {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/day-work.jpg") center / cover no-repeat;
+    url("assets/day-work.webp") center / cover no-repeat;
 }
 
 .skill-motor {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/motor-skils.png") center / cover no-repeat;
+    url("assets/motor-skils.webp") center / cover no-repeat;
 }
 
 .skill-social {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/social.png") center / cover no-repeat;
+    url("assets/social.webp") center / cover no-repeat;
 }
 
 .skill-paint {
   background:
     linear-gradient(rgba(255, 255, 255, .58), rgba(255, 255, 255, .58)),
-    url("assets/paint.png") center / cover no-repeat;
+    url("assets/paint.webp") center / cover no-repeat;
 }
 
 .skill h3 {
@@ -1996,7 +1997,7 @@ footer {
 
 .reviews-section {
   background-color: var(--cream);
-  background-image: url("assets/reviews-section.png");
+  background-image: url("assets/reviews-section.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2135,4 +2136,41 @@ footer {
 
 .external-link:hover {
   color: #0d5278;
+}
+
+/* Hero cards: еднакви рамки, плакатът запазва правилното изрязване като в оригинала. */
+.hero-news .hero-banner {
+  min-height: 0;
+}
+.hero-news .hero-banner > video,
+.hero-news .hero-banner > img {
+  display: block;
+  width: 100%;
+  height: clamp(250px, 29vw, 330px);
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  box-sizing: border-box;
+}
+.hero-news .hero-banner > .hero-banner-mobile-image {
+  display: none;
+}
+.hero-news .hero-banner > video {
+  object-position: center 45%;
+}
+@media (max-width: 760px) {
+  .hero-news .hero-banner > video {
+    display: none;
+  }
+  .hero-news .hero-banner > .hero-banner-mobile-image {
+    display: block;
+    height: clamp(230px, 62vw, 360px);
+    object-fit: cover;
+    object-position: center 45%;
+  }
+  .hero-news .hero-banner > img:not(.hero-banner-mobile-image) {
+    height: clamp(230px, 62vw, 360px);
+    object-fit: cover;
+    object-position: center 30%;
+  }
 }

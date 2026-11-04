@@ -51,7 +51,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="IN-VI Kids - начало">
-        <img src="assets/logo.png" alt="IN-VI Kids">
+        <img src="assets/logo.webp" width="1799" height="1799" alt="IN-VI Kids">
       </a>
       <button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false" aria-controls="main-nav">
         <span></span>
@@ -72,7 +72,7 @@
     </div>
   </header>
   <button class="back-to-top" id="backToTop" aria-label="Върни ме горе">
-    <img src="assets/cloud-top.png" alt="">
+    <img src="assets/cloud-top.webp" width="1536" height="1024" alt="">
   </button>
   <main id="top">
     <section class="hero hero-autumn">
@@ -89,7 +89,8 @@
         </div>
         <div class="hero-news">
           <article class="hero-banner">
-            <video class="hero-banner-video" autoplay muted loop playsinline aria-label="Преживявания сред природата">
+            <img class="hero-banner-mobile-image" src="assets/autumn-poster.webp" width="720" height="1280" fetchpriority="high" alt="Детско преживяване сред природата">
+            <video class="hero-banner-video" muted loop playsinline preload="metadata" poster="assets/autumn-poster.webp" aria-label="Преживявания сред природата">
               <source src="assets/autumn-web.mp4" type="video/mp4">
             </video>
             <div class="hero-banner-overlay">
@@ -102,7 +103,7 @@
           </article>
 
           <article class="hero-banner">
-            <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Предстоящо групово занимание в природата"
+            <img class="lightbox-trigger" src="assets/event-autumn.webp" width="1054" height="1492" alt="Предстоящо групово занимание в природата"
               tabindex="0" role="button">
             <div class="hero-banner-overlay">
               <span>ПРЕДСТОЯЩО</span>
@@ -113,7 +114,7 @@
 
           <!-- Банерът за безплатните консултации е запазен за бъдещо активиране.
               <article class="hero-banner">
-                <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+                <img class="lightbox-trigger" src="assets/free-consultations.webp" width="1567" height="688"
                   alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
                 <div class="hero-banner-overlay">
                   <span>АКТУАЛНО</span>
@@ -142,15 +143,15 @@
       <div class="container about-card">
 
         <div class="about-photo">
-          <img src="assets/ina.jpg" alt="Ина – създател на IN-VI Kids">
+          <img src="assets/ina.webp" width="900" height="1277" fetchpriority="high" decoding="async" alt="Ина – създател на IN-VI Kids">
 
-          <video id="about-video" controls muted playsinline
+          <video id="about-video" controls muted playsinline preload="metadata" poster="assets/about-video-poster.webp"
             aria-label="Ина и Влади – историята зад създаването на IN-VI Kids">
             <source src="assets/ergo-vladi.mp4" type="video/mp4">
             Вашият браузър не поддържа видео.
           </video>
 
-          <img src="assets/ina-vladi.png" alt="Ина и Влади – историята зад създаването на IN-VI Kids">
+          <img src="assets/ina-vladi.webp" width="1086" height="1449" alt="Ина и Влади – историята зад създаването на IN-VI Kids">
         </div>
         <div class="about-copy">
           <div>
@@ -327,7 +328,7 @@
         <div class="news-grid">
           <!-- Запазена за бъдещо активиране: <article class="news-card" id="news-consultations">
             <div class="news-banner-wrap">
-              <img class="lightbox-trigger" src="assets/free-consultations.jpg"
+              <img class="lightbox-trigger" src="assets/free-consultations.webp" width="1567" height="688"
                 alt="Безплатни консултации през септември и октомври" tabindex="0" role="button">
             </div>
             <div class="news-body">
@@ -347,7 +348,7 @@
           </article> -->
           <article class="news-card" id="news-event">
             <div class="news-banner-wrap">
-              <img class="lightbox-trigger" src="assets/event-autumn.png" alt="Есенно групово занимание сред природата"
+              <img class="lightbox-trigger" src="assets/event-autumn.webp" width="1054" height="1492" alt="Есенно групово занимание сред природата"
                 tabindex="0" role="button">
             </div>
             <div class="news-body">
@@ -376,7 +377,7 @@
 
           <article class="news-card" id="news-occupational-day">
             <div class="news-banner-wrap">
-              <video class="news-banner-video" autoplay muted loop playsinline controls preload="metadata"
+              <video class="news-banner-video" muted playsinline controls preload="none" poster="assets/autumn-poster.webp"
                 aria-label="Видео от IN-VI Kids за Световния ден на ерготерапията">
                 <source src="assets/autumn-web.mp4" type="video/mp4">
               </video>
@@ -408,7 +409,7 @@
             </div>
           </article>
           <article class="news-card" id="news-development">
-            <div class="news-visual news-nature"><img class="lightbox-trigger" src="assets/what-is-ergo.png"
+            <div class="news-visual news-nature"><img class="lightbox-trigger" src="assets/what-is-ergo.webp" width="1374" height="1145"
                 alt="Дете в занимание в IN-VI Kids" tabindex="0" role="button"></div>
             <div class="news-body">
               <p class="news-tag">Полезно</p>
@@ -635,33 +636,18 @@
       });
     });
 
-    const aboutVideo = document.getElementById('about-video');
-
-    if (aboutVideo && 'IntersectionObserver' in window) {
-      const videoObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            if (aboutVideo.ended) aboutVideo.currentTime = 0;
-            aboutVideo.play().catch(function () {
-              // The browser may block autoplay until the user interacts.
-            });
-          } else {
-            aboutVideo.pause();
-          }
-        });
-      }, { threshold: 0.6 });
-
-      videoObserver.observe(aboutVideo);
-    }
+    // Видеото в секцията „За нас“ се стартира само от потребителя.
 
     const heroVideo = document.querySelector('.hero-banner-video');
 
-    if (heroVideo && 'IntersectionObserver' in window) {
+    // На мобилни устройства използваме лек статичен кадър вместо autoplay видео.
+    // Така не се изтегля видеофайлът при първоначално зареждане на страницата.
+    if (heroVideo && window.matchMedia('(min-width: 761px)').matches && 'IntersectionObserver' in window) {
       const heroVideoObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             heroVideo.play().catch(function () {
-              // The browser may block autoplay until the user interacts.
+              // Видеото остава с наличен poster, ако autoplay бъде блокиран.
             });
           } else {
             heroVideo.pause();

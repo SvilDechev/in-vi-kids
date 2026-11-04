@@ -29,7 +29,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html#top" aria-label="IN-VI Kids - начало">
-        <img src="assets/logo.png" alt="IN-VI Kids">
+        <img src="assets/logo.webp" width="1799" height="1799" alt="IN-VI Kids">
       </a>
       <button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false"
         aria-controls="main-nav">
@@ -52,7 +52,7 @@
   </header>
 
   <button class="back-to-top" id="backToTop" type="button" aria-label="Върни ме горе">
-    <img src="assets/cloud-top.png" alt="">
+    <img src="assets/cloud-top.webp" width="1536" height="1024" alt="">
   </button>
 
   <main id="top" class="adventures-page">
@@ -148,8 +148,8 @@
 
               <div class="adventure-inline-pair">
                 <figure class="adventure-inline-photo">
-                  <img class="adventure-gallery-image" src="https://lh3.googleusercontent.com/pw/AP1GczNgBHszqpcdENfAn4lcoek1W7Hg5nDVw7jv721rJgxOoqu_M0a89uvSAoMkkaUNhZTr4yIV6qvpo7haN-pb7NsVVNBVYOJLhXw7kIpJLpXs46rCORA=w1125-h1407-p-k-no"
-                    alt="Дете разглежда камъните по пътеката" loading="lazy" tabindex="0" role="button">
+                  <img class="adventure-gallery-image" src="assets/pyramid-still.jpg" width="512" height="640"
+                    alt="Дете изгражда малка каменна пирамидка по време на разходката" loading="lazy" tabindex="0" role="button">
                   <figcaption>Любопитството намира поводи за креативност по целия маршрут.</figcaption>
                 </figure>
                 <figure class="adventure-inline-photo">
@@ -210,6 +210,18 @@
         link.addEventListener('click', closeMenu);
       });
     }
+
+    // При отваряне на приключение показваме началото на текста под фиксираната навигация.
+    document.querySelectorAll('.adventure-entry').forEach(function (entry) {
+      entry.addEventListener('toggle', function () {
+        if (!entry.open) return;
+        const content = entry.querySelector('.adventure-entry-content');
+        if (!content) return;
+        requestAnimationFrame(function () {
+          content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
