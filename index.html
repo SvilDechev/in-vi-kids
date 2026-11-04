@@ -641,21 +641,58 @@
     const heroVideo = document.querySelector('.hero-banner-video');
 
     // На мобилни устройства използваме лек статичен кадър вместо autoplay видео.
-    // Така не се изтегля видеофайлът при първоначално зареждане на страницата.
-    if (heroVideo && window.matchMedia('(min-width: 761px)').matches && 'IntersectionObserver' in window) {
-      const heroVideoObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            heroVideo.play().catch(function () {
-              // Видеото остава с наличен poster, ако autoplay бъде блокиран.
-            });
-          } else {
-            heroVideo.pause();
-          }
-        });
-      }, { threshold: 0.6 });
+    // На desktop видеото се възпроизвежда само докато е видимо на екрана.
+    if (heroVideo && window.matchMedia('(min-width: 761px)').matches) {
+      let heroVideoIsVisible = false;
+      heroVideo.loop = true;
 
-      heroVideoObserver.observe(heroVideo);
+      function playHeroVideo() {
+        if (!heroVideoIsVisible || document.hidden) return;
+
+        // Възстановяваме началото, ако браузърът е оставил видеото в края.
+        if (heroVideo.ended) {
+          heroVideo.currentTime = 0;
+        }
+
+        const playPromise = heroVideo.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(function () {
+            // Видеото остава с наличен poster, ако autoplay бъде блокиран.
+          });
+        }
+      }
+
+      if ('IntersectionObserver' in window) {
+        const heroVideoObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            heroVideoIsVisible = entry.isIntersecting && entry.intersectionRatio >= 0.6;
+            if (heroVideoIsVisible) {
+              playHeroVideo();
+            } else {
+              heroVideo.pause();
+            }
+          });
+        }, { threshold: [0, 0.6] });
+
+        heroVideoObserver.observe(heroVideo);
+      } else {
+        heroVideoIsVisible = true;
+        playHeroVideo();
+      }
+
+      // Допълнителна защита при край на клипа и връщане към отворения таб.
+      heroVideo.addEventListener('ended', function () {
+        heroVideo.currentTime = 0;
+        playHeroVideo();
+      });
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          heroVideo.pause();
+        } else {
+          playHeroVideo();
+        }
+      });
     }
 
     const menuToggle = document.querySelector('.menu-toggle');
@@ -769,6 +806,8 @@
       });
     });
   </script>
+  <script src="christmas.js?v=1" defer></script>
+
   <footer>
     <div class="container footer-wrap">
       <span>© IN-VI Kids</span>

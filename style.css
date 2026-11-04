@@ -2174,3 +2174,160 @@ footer {
     object-position: center 30%;
   }
 }
+
+
+/* =========================
+   CHRISTMAS THEME (seasonal)
+   ========================= */
+body.christmas-theme .hero-autumn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #fff8ef;
+  background-image: url("assets/christmas-hero-background.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+body.christmas-theme .hero-autumn::before,
+body.christmas-theme .hero-autumn::after {
+  content: none;
+}
+
+body.christmas-theme .autumn-decor { display: none; }
+
+body.christmas-theme .hero-autumn > .container {
+  position: relative;
+  z-index: 2;
+}
+
+#christmas-snow {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.christmas-flake {
+  position: absolute;
+  display: block;
+  top: -28px;
+  left: var(--flake-left);
+  color: var(--flake-color, #d9edf5);
+  font-family: Georgia, serif;
+  font-size: var(--flake-size);
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 3px rgba(39,83,105,.48), 0 0 7px rgba(255,255,255,.98), 0 0 12px rgba(185,220,233,.65);
+  opacity: var(--flake-opacity);
+  animation: christmas-fall var(--flake-duration) linear var(--flake-delay) infinite;
+  will-change: transform;
+}
+
+@keyframes christmas-fall {
+  0% { transform: translate3d(0, -5vh, 0) rotate(0deg); }
+  50% { transform: translate3d(var(--flake-drift), 52vh, 0) rotate(150deg); }
+  100% { transform: translate3d(calc(var(--flake-drift) * -.45), 110vh, 0) rotate(310deg); }
+}
+
+@media (max-width: 760px) {
+  body.christmas-theme .hero-autumn {
+    /* Keep Santa visible on narrow screens; the source image is wider than a phone. */
+    background-size: auto 100%;
+    background-position: left top;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .christmas-flake { animation: none; }
+}
+
+
+/* Delicate seasonal autumn leaves (October–November). */
+#autumn-leaves {
+  position: fixed;
+  inset: 0;
+  z-index: 39;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.autumn-leaf {
+  position: absolute;
+  display: block;
+  top: -90px;
+  left: var(--leaf-left);
+  width: var(--leaf-size);
+  height: auto;
+  object-fit: contain;
+  opacity: var(--leaf-opacity);
+  filter: blur(var(--leaf-blur)) saturate(.94);
+  transform-origin: 50% 50%;
+  animation: autumn-leaf-fall var(--leaf-duration) ease-in-out var(--leaf-delay) infinite;
+  will-change: transform;
+}
+
+@keyframes autumn-leaf-fall {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(var(--leaf-rotation));
+  }
+  18% {
+    transform: translate3d(var(--leaf-sway), 13vh, 0) rotate(calc(var(--leaf-rotation) + 55deg));
+  }
+  38% {
+    transform: translate3d(calc(var(--leaf-sway) * -0.75), 34vh, 0) rotate(calc(var(--leaf-rotation) + 125deg));
+  }
+  58% {
+    transform: translate3d(calc(var(--leaf-sway) * 0.8), 57vh, 0) rotate(calc(var(--leaf-rotation) + 205deg));
+  }
+  78% {
+    transform: translate3d(calc(var(--leaf-sway) * -0.65), 81vh, 0) rotate(calc(var(--leaf-rotation) + 285deg));
+  }
+  100% {
+    transform: translate3d(0, 112vh, 0) rotate(calc(var(--leaf-rotation) + 360deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .autumn-leaf { animation: none; }
+}
+
+
+@media (max-width: 760px) {
+  .autumn-leaf {
+    filter: blur(0) saturate(1.02);
+  }
+}
+
+
+/* Mobile Christmas hero: preserve the festive background while keeping copy readable. */
+@media (max-width: 760px) {
+  body.christmas-theme .hero-intro {
+    padding: 16px 14px 18px;
+    margin: 0 10px 30px;
+    border-radius: 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 249, 239, .84) 0%,
+      rgba(255, 249, 239, .74) 100%
+    );
+    box-shadow: 0 5px 22px rgba(42, 49, 48, .10);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+
+  body.christmas-theme .hero-intro h1 {
+    color: #183c50;
+    text-shadow: 0 1px 0 rgba(255,255,255,.65);
+  }
+
+  body.christmas-theme .hero-intro .hero-text {
+    color: #244b5d;
+    font-weight: 500;
+    text-shadow: 0 1px 0 rgba(255,255,255,.55);
+  }
+}

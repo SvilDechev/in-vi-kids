@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" preserveAspectRatio="xMidYMid slice">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7ead7"/><stop offset=".48" stop-color="#fffaf1"/><stop offset="1" stop-color="#edf3eb"/></linearGradient>
+  <linearGradient id="pine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173d2c"/><stop offset=".5" stop-color="#386345"/><stop offset="1" stop-color="#65815a"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#fff9d9" stop-opacity=".95"/><stop offset="1" stop-color="#f4c978" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="light"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ </defs>
+ <rect width="1600" height="1050" fill="url(#bg)"/>
+ <circle cx="130" cy="310" r="220" fill="#f5d8b6" opacity=".28" filter="url(#blur)"/>
+ <circle cx="1480" cy="400" r="230" fill="#e9c7b3" opacity=".24" filter="url(#blur)"/>
+ <circle cx="1330" cy="870" r="210" fill="#c9d9c9" opacity=".24" filter="url(#blur)"/>
+ <!-- left evergreen bough -->
+ <g fill="none" stroke="url(#pine)" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M-70 20 C120 10 220 110 430 255" stroke-width="19"/>
+  <path d="M5 25 L-20 125 M35 28 L12 145 M75 38 L52 158 M116 55 L95 174 M158 76 L137 190 M201 102 L183 212 M244 130 L228 235 M286 160 L273 260 M328 190 L316 282 M370 220 L360 300" stroke-width="7"/>
+  <path d="M12 52 L-62 92 M52 58 L-12 111 M94 76 L30 132 M138 96 L76 154 M181 120 L121 179 M224 148 L169 206 M267 178 L215 234 M310 207 L264 262 M352 235 L311 286" stroke-width="6"/>
+  <path d="M-15 8 L-42 65 M27 16 L0 82 M68 30 L40 98 M110 48 L83 115 M151 68 L126 134 M194 94 L171 158 M236 120 L215 181 M278 151 L260 207 M320 181 L303 234" stroke-width="5"/>
+ </g>
+ <!-- right evergreen bough -->
+ <g fill="none" stroke="url(#pine)" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M1670 15 C1480 10 1380 110 1170 255" stroke-width="19"/>
+  <path d="M1595 25 L1620 125 M1565 28 L1588 145 M1525 38 L1548 158 M1484 55 L1505 174 M1442 76 L1463 190 M1399 102 L1417 212 M1356 130 L1372 235 M1314 160 L1327 260 M1272 190 L1284 282 M1230 220 L1240 300" stroke-width="7"/>
+  <path d="M1588 52 L1662 92 M1548 58 L1612 111 M1506 76 L1570 132 M1462 96 L1524 154 M1419 120 L1479 179 M1376 148 L1431 206 M1333 178 L1385 234 M1290 207 L1336 262 M1248 235 L1289 286" stroke-width="6"/>
+  <path d="M1615 8 L1642 65 M1573 16 L1600 82 M1532 30 L1560 98 M1490 48 L1517 115 M1449 68 L1474 134 M1406 94 L1429 158 M1364 120 L1385 181 M1322 151 L1340 207 M1280 181 L1297 234" stroke-width="5"/>
+ </g>
+ <!-- snow on branches -->
+ <g fill="none" stroke="#fff" stroke-linecap="round" opacity=".95">
+  <path d="M-25 10 Q65 -2 145 52 T315 160 M18 48 Q85 30 155 88 M130 82 Q190 70 258 130 M1625 10 Q1535 -2 1455 52 T1285 160 M1582 48 Q1515 30 1445 88 M1470 82 Q1410 70 1342 130" stroke-width="13"/>
+  <path d="M-10 96 Q50 75 115 115 M1490 115 Q1550 75 1610 96" stroke-width="8"/>
+ </g>
+ <!-- red berries -->
+ <g fill="#b5262f" stroke="#7f1824" stroke-width="2">
+  <circle cx="105" cy="115" r="11"/><circle cx="127" cy="128" r="10"/><circle cx="89" cy="139" r="9"/><circle cx="145" cy="147" r="8"/>
+  <circle cx="1490" cy="115" r="11"/><circle cx="1468" cy="128" r="10"/><circle cx="1506" cy="139" r="9"/><circle cx="1450" cy="147" r="8"/>
+ </g>
+ <!-- warm fairy lights -->
+ <g fill="#fff4c4" filter="url(#light)"><circle cx="55" cy="180" r="7"/><circle cx="175" cy="210" r="6"/><circle cx="300" cy="250" r="7"/><circle cx="1545" cy="180" r="7"/><circle cx="1425" cy="210" r="6"/><circle cx="1300" cy="250" r="7"/></g>
+ <g stroke="#d9b36a" stroke-width="3" fill="none"><path d="M55 150v22 M175 180v22 M300 220v22 M1545 150v22 M1425 180v22 M1300 220v22"/></g>
+ <!-- hanging stars -->
+ <g stroke="#b77b2c" stroke-width="2" fill="#e9b64f">
+  <path d="M205 0v190 M1395 0v190" fill="none"/>
+  <path d="M205 190l10 20 22 3-16 15 4 22-20-11-20 11 4-22-16-15 22-3z"/>
+  <path d="M1395 190l10 20 22 3-16 15 4 22-20-11-20 11 4-22-16-15 22-3z"/>
+ </g>
+ <!-- very subtle snow sparkle field -->
+ <g fill="#fff" opacity=".78"><circle cx="390" cy="140" r="4"/><circle cx="520" cy="270" r="3"/><circle cx="1080" cy="180" r="4"/><circle cx="1210" cy="330" r="3"/><circle cx="250" cy="430" r="3"/><circle cx="1370" cy="500" r="4"/><circle cx="420" cy="690" r="3"/><circle cx="1160" cy="760" r="3"/></g>
+ <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".75"><path d="M480 110v22m-11-11h22 M1120 300v22m-11-11h22 M310 580v22m-11-11h22 M1300 650v22m-11-11h22"/></g>
+</svg>

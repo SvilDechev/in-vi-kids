@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 260" preserveAspectRatio="none">
+<defs>
+ <linearGradient id="pine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#254b35"/><stop offset=".55" stop-color="#466d43"/><stop offset="1" stop-color="#183b2b"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<!-- left sweeping pine bough -->
+<g fill="none" stroke="url(#pine)" stroke-linecap="round">
+ <path d="M-35 12 C90 10 160 50 290 118" stroke-width="13"/>
+ <path d="M-5 10 L28 64 M25 14 L54 82 M58 22 L85 94 M91 31 L119 101 M126 43 L151 111 M161 57 L184 122 M197 74 L218 132 M230 91 L251 145" stroke-width="5"/>
+ <path d="M8 24 L-15 68 M42 29 L13 82 M76 39 L49 91 M111 52 L84 105 M146 67 L120 119 M181 84 L157 135 M216 101 L195 151 M251 119 L232 166" stroke-width="4"/>
+ <!-- right sweeping pine bough -->
+ <path d="M1635 8 C1510 12 1440 52 1310 120" stroke-width="13"/>
+ <path d="M1592 12 L1565 67 M1560 16 L1534 84 M1527 24 L1501 96 M1494 34 L1469 105 M1458 47 L1434 116 M1423 61 L1401 128 M1387 78 L1366 139 M1352 96 L1332 151" stroke-width="5"/>
+ <path d="M1610 23 L1635 68 M1577 30 L1606 84 M1543 40 L1573 94 M1508 53 L1538 108 M1473 68 L1501 121 M1438 85 L1464 137 M1403 102 L1427 154 M1368 121 L1390 170" stroke-width="4"/>
+</g>
+<!-- little snow caps -->
+<g fill="none" stroke="#fff" stroke-linecap="round" opacity=".8"><path d="M-5 4 Q50 0 95 30 M45 15 Q95 8 145 48 M1510 15 Q1555 0 1605 5 M1455 32 Q1500 8 1550 16" stroke-width="7"/></g>
+<!-- hanging gold stars -->
+<g stroke="#b77a25" stroke-width="2" fill="#e5b14d">
+ <path d="M195 0 V130" fill="none"/><path d="M195 130 l10 18 20 3 -15 14 4 20 -19 -10 -18 10 4 -20 -15 -14 20 -3z"/>
+ <path d="M1405 0 V105" fill="none"/><path d="M1405 105 l9 17 19 3 -14 13 3 19 -17 -9 -17 9 3 -19 -14 -13 19 -3z"/>
+</g>
+<!-- warm fairy lights -->
+<path d="M0 95 Q140 130 290 175 M1600 92 Q1460 130 1310 175" fill="none" stroke="#d9bd7a" stroke-width="2" opacity=".7"/>
+<g fill="#ffe6a1" filter="url(#glow)"><circle cx="36" cy="104" r="5"/><circle cx="105" cy="130" r="4"/><circle cx="176" cy="151" r="5"/><circle cx="1565" cy="105" r="5"/><circle cx="1490" cy="132" r="4"/><circle cx="1418" cy="153" r="5"/></g>
+</svg>
