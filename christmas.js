@@ -25,6 +25,7 @@
   var showSnow = previewChristmas || previewSnow || isWinterSnowSeason;
 
   if (showChristmasTheme) document.body.classList.add('christmas-theme');
+  if (showAutumnLeaves) document.body.classList.add('autumn-theme');
 
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isMobile = window.innerWidth <= 760;
@@ -37,8 +38,8 @@
 
     // Fewer, larger leaves, distributed evenly across the full viewport.
     var leafCount = isMobile ? 4 : 7;
-    var minSize = isMobile ? 66 : 88;
-    var sizeRange = isMobile ? 22 : 42;
+    var minSize = isMobile ? 40 : 52;
+    var sizeRange = isMobile ? 12 : 18;
 
     for (var j = 0; j < leafCount; j++) {
       var leaf = document.createElement('img');

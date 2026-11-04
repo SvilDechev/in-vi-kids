@@ -186,7 +186,7 @@ a {
   color: var(--turquoise);
   font-weight: 900;
   letter-spacing: .08em;
-  font-size: .99rem;
+  font-size: 1.65rem;
 }
 
 .hero-text {
@@ -2330,4 +2330,72 @@ body.christmas-theme .hero-autumn > .container {
     font-weight: 500;
     text-shadow: 0 1px 0 rgba(255,255,255,.55);
   }
+}
+
+
+
+
+/* Autumn background: clean image asset, implemented like the Christmas hero. */
+body.autumn-theme .hero-autumn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #fff8ef;
+  background-image: url("assets/autumn-hero-background.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+body.autumn-theme .hero-autumn::before,
+body.autumn-theme .hero-autumn::after {
+  content: none;
+}
+body.autumn-theme .autumn-decor {
+  display: none;
+}
+body.autumn-theme .hero-autumn > .container {
+  position: relative;
+  z-index: 2;
+}
+body.autumn-theme .hero-intro .eyebrow {
+  color: #c76b1e;
+}
+body.autumn-theme .hero-intro h1 {
+  color: #75401f;
+}
+body.autumn-theme .hero-intro .hero-text {
+  color: #3f3028;
+}
+@media (max-width: 760px) {
+  body.autumn-theme .hero-autumn {
+    background-size: auto 100%;
+    background-position: 62% top;
+  }
+}
+
+
+
+
+/* Autumn hero typography — stronger contrast, without a panel behind the text. */
+body.autumn-theme .hero-intro {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+body.autumn-theme .hero-intro .eyebrow {
+  color: #693817;
+  font-weight: 900;
+  text-shadow: 0 1px 0 rgba(255, 250, 242, .98), 0 0 5px rgba(255, 250, 242, .9);
+}
+body.autumn-theme .hero-intro h1 {
+  color: #633315;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 250, 242, .98), 0 2px 5px rgba(255, 250, 242, .9);
+}
+body.autumn-theme .hero-intro .hero-text {
+  color: #302016;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 250, 242, .98), 0 1px 5px rgba(255, 250, 242, .95);
 }

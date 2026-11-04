@@ -16,3 +16,5 @@ Autumn leaves are intentionally subtle: 12 on desktop and 7 on mobile. The exist
 Autumn leaves preview: add ?autumn=1. The autumn effect uses fewer, larger, more visible realistic leaves.
 
 Final autumn effect: 7 large leaves across desktop / 4 on mobile, gently swaying left and right while falling. Preview: ?autumn=1
+
+Autumn theme: full hero background like Christmas, smaller falling leaves. Preview with ?autumn=1.
