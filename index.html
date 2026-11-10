@@ -100,6 +100,34 @@
 </head>
 
 <body>
+  <script>
+    // Activate the seasonal hero theme before the main content is parsed,
+    // so its CSS background can be requested as early as possible.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var now = new Date();
+      var month = now.getMonth();
+      var day = now.getDate();
+      var previewAutumn = params.get('autumn') === '1';
+      var previewChristmas = params.get('christmas') === '1';
+      var previewSnow = params.get('snow') === '1';
+      var autumn = previewAutumn || (!previewChristmas && !previewSnow &&
+        ((month === 9 && day >= 1) || (month === 10 && day <= 30)));
+      var christmas = previewChristmas || (month === 11 && day >= 1 && day <= 31);
+      if (autumn) document.body.classList.add('autumn-theme');
+      if (christmas) document.body.classList.add('christmas-theme');
+      var image = autumn ? 'assets/autumn-hero-background.webp' :
+        (christmas ? 'assets/christmas-hero-background.webp' : null);
+      if (image) {
+        var preload = document.createElement('link');
+        preload.rel = 'preload';
+        preload.as = 'image';
+        preload.href = image;
+        preload.fetchPriority = 'high';
+        document.head.appendChild(preload);
+      }
+    })();
+  </script>
   <div id="lightbox" class="lightbox">
     <button class="lightbox-close" aria-label="Затвори изображението">✕</button>
     <img id="lightbox-image" src="" alt="">
