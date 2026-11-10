@@ -44,7 +44,7 @@
     for (var j = 0; j < leafCount; j++) {
       var leaf = document.createElement('img');
       leaf.className = 'autumn-leaf';
-      leaf.src = 'assets/autumn-leaf-real.png';
+      leaf.src = 'assets/autumn-leaf-real.webp';
       leaf.alt = '';
       leaf.decoding = 'async';
 
