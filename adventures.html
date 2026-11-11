@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
   <link rel="stylesheet" href="style.css?v=outdoor-adventures">
+  <script src="site-config.js?v=2" defer></script>
   <script src="adventures.js?v=perf-2" defer></script>
   <script src="christmas.js?v=1" defer></script>
 
@@ -72,8 +73,8 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html#top" aria-label="IN-VI Kids - начало">
-        <img src="assets/logo.webp" width="256" height="256" alt="IN-VI Kids">
+      <a class="brand" href="index.html#top" data-site-aria-label="brandHomeLabel">
+        <img src="assets/logo.webp" width="256" height="256" data-site-alt="logoAlt">
       </a>
       <button class="menu-toggle" type="button" aria-label="Отвори меню" aria-expanded="false"
         aria-controls="main-nav">
@@ -91,7 +92,7 @@
         <a href="index.html#reviews">Отзиви</a>
         <a href="index.html#find-us">Контакти</a>
       </nav>
-      <a class="nav-button" href="index.html#find-us">Запази час</a>
+      <a class="nav-button" href="index.html#find-us" >Запази час</a>
     </div>
   </header>
 
@@ -102,7 +103,7 @@
   <main id="top" class="adventures-page">
     <section class="adventures-hero">
       <div class="container adventures-hero-content">
-        <p class="section-label">IN-VI KIDS · Активности</p>
+        <p class="section-label"><span data-site-text="brandName"></span> · Активности</p>
         <h1>Приключения навън</h1>
         <blockquote class="adventures-quote">
           <p>Едно от най-хубавите неща, които можем да направим за себе си и за децата си, е да излезем навън, да оставим всекидневните задачи, екраните и динамичното си ежедневие. Да сменим обичайната обстановка с пътека сред дърветата, шума на водата, полъха на вятъра и шумоленето на листата.</p>
@@ -223,7 +224,9 @@
 
   <footer>
     <div class="container footer-wrap">
-      <span>© IN-VI Kids</span>
+      <span>© <span data-site-text="brandName"></span>
+        <br>Design & Development by Svilen Dechev
+      </span>
       <span>Ерготерапия и детско развитие · София</span>
     </div>
   </footer>
