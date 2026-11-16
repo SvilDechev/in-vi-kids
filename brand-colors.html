@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#079bb1">
+  <title>IN-VI Kids | Цветова палитра</title>
+  <style>
+    :root {
+      --brand-turquoise: #079bb1;
+      --brand-turquoise-light: #dff6fa;
+      --brand-turquoise-dark: #087f9a;
+      --brand-turquoise-hover: #07889d;
+      --brand-navy: #23465d;
+      --brand-navy-deep: #193546;
+      --text: #294457;
+      --text-muted: #607582;
+      --white: #fff;
+      --cream: #f8f3ea;
+      --section-warm: #f4eee3;
+      --section-warm-light: #f6efe3;
+      --seasonal-ivory: #fff8ef;
+      --autumn-cream: #f8f0df;
+      --autumn-paper: #fffaf2;
+      --autumn-sage-light: #edf5e9;
+      --autumn-sage: #e9f0dd;
+      --autumn-sage-deep: #d6e3c7;
+      --autumn-olive: #718b57;
+      --autumn-orange: #e87528;
+      --autumn-orange-dark: #c76b1e;
+      --autumn-copper: #b85d2e;
+      --autumn-rust: #a64b25;
+      --autumn-gold: #d78a36;
+      --autumn-brown: #75401f;
+      --autumn-brown-deep: #693817;
+      --autumn-brown-dark: #633315;
+      --autumn-text: #3f3028;
+      --autumn-text-dark: #302016;
+      --christmas-snow: #d9edf5;
+      --christmas-ice: #9fe0e7;
+      --christmas-flake-blue: #b9dce9;
+      --christmas-flake-pale: #eaf7fc;
+      --christmas-navy: #183c50;
+      --christmas-text: #244b5d;
+      --social-pink: #b83280;
+      --social-facebook: #1877f2;
+      --rating-gold: #f4b400;
+      --link-blue: #1976a8;
+      --link-blue-dark: #0d5278;
+      --line: #e4eaed;
+      --shadow: 0 12px 32px rgba(35,70,93,.08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); background: #f7fafb; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+    .page { width: min(1080px, calc(100% - 36px)); margin: 42px auto 64px; }
+    header { padding: 34px; color: white; border-radius: 22px; background: linear-gradient(125deg, var(--brand-turquoise), var(--brand-navy)); box-shadow: var(--shadow); }
+    .eyebrow { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); line-height: 1.12; }
+    header p { max-width: 650px; margin: 12px 0 0; color: rgba(255,255,255,.9); }
+    section { margin-top: 34px; }
+    h2 { margin: 0 0 6px; color: var(--brand-navy); font-size: 22px; }
+    .intro { margin: 0 0 16px; color: var(--text-muted); font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+    .swatch { overflow: hidden; background: white; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 3px 12px rgba(35,70,93,.035); }
+    .sample { height: 92px; border-bottom: 1px solid rgba(35,70,93,.08); }
+    .meta { padding: 11px 13px 13px; }
+    .name { display: block; color: var(--brand-navy); font-size: 14px; font-weight: 700; }
+    .token { display: block; margin-top: 2px; color: var(--text-muted); font-size: 11px; }
+    .hexrow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+    code { color: var(--text); font-size: 12px; font-weight: 700; }
+    button { padding: 5px 9px; border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--brand-navy); font-size: 11px; cursor: pointer; }
+    button:hover { border-color: var(--brand-turquoise); }
+    .note { margin-top: 30px; padding: 16px 18px; border-left: 4px solid var(--brand-turquoise); border-radius: 8px; background: white; color: var(--text-muted); font-size: 13px; }
+    footer { margin-top: 28px; color: var(--text-muted); font-size: 11px; text-align: center; }
+    @media (max-width: 520px) { .page { width: calc(100% - 24px); margin-top: 16px; } header { padding: 25px 22px; } .grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; } .sample { height: 72px; } .meta { padding: 9px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">Brand reference · IN-VI Kids</p>
+      <h1>Цветова палитра</h1>
+      <p>Цветовете, използвани в уебсайта на IN-VI Kids. Справочник за последователна визия в сайта, публикациите, рекламите и печатните материали.</p>
+    </header>
+
+    <section>
+      <h2>Основни цветове на IN-VI Kids</h2>
+      <p class="intro">Водещите цветове на бранда и основните им нюанси.</p>
+      <div class="grid">
+        <article class="swatch"><div class="sample" style="background:#079bb1"></div><div class="meta"><span class="name">Тюркоазено</span><span class="token">--turquoise</span><div class="hexrow"><code>#079BB1</code><button data-copy="#079bb1">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#dff6fa"></div><div class="meta"><span class="name">Светъл тюркоаз</span><span class="token">--turquoise-light</span><div class="hexrow"><code>#DFF6FA</code><button data-copy="#dff6fa">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#087f9a"></div><div class="meta"><span class="name">Тъмно тюркоазено</span><span class="token">--turquoise-dark</span><div class="hexrow"><code>#087F9A</code><button data-copy="#087f9a">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#07889d"></div><div class="meta"><span class="name">Тюркоазено – hover</span><span class="token">--turquoise-hover</span><div class="hexrow"><code>#07889D</code><button data-copy="#07889d">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#23465d"></div><div class="meta"><span class="name">Тъмносиньо</span><span class="token">--navy</span><div class="hexrow"><code>#23465D</code><button data-copy="#23465d">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#193546"></div><div class="meta"><span class="name">Дълбоко тъмносиньо</span><span class="token">--navy-deep</span><div class="hexrow"><code>#193546</code><button data-copy="#193546">Копирай</button></div></div></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Неутрални и цветове за текст</h2>
+      <p class="intro">Фонове, текст и спокойни основи, които балансират основните цветове.</p>
+      <div class="grid">
+        <article class="swatch"><div class="sample" style="background:#294457"></div><div class="meta"><span class="name">Основен текст</span><span class="token">--text</span><div class="hexrow"><code>#294457</code><button data-copy="#294457">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#607582"></div><div class="meta"><span class="name">Вторичен текст</span><span class="token">--text-muted</span><div class="hexrow"><code>#607582</code><button data-copy="#607582">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#ffffff"></div><div class="meta"><span class="name">Бяло</span><span class="token">--white</span><div class="hexrow"><code>#FFFFFF</code><button data-copy="#ffffff">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#f8f3ea"></div><div class="meta"><span class="name">Кремаво</span><span class="token">--cream</span><div class="hexrow"><code>#F8F3EA</code><button data-copy="#f8f3ea">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#f4eee3"></div><div class="meta"><span class="name">Топъл фон</span><span class="token">--section-warm</span><div class="hexrow"><code>#F4EEE3</code><button data-copy="#f4eee3">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#f6efe3"></div><div class="meta"><span class="name">Светъл топъл фон</span><span class="token">--section-warm-light</span><div class="hexrow"><code>#F6EFE3</code><button data-copy="#f6efe3">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#fff8ef"></div><div class="meta"><span class="name">Сезонна слонова кост</span><span class="token">--seasonal-ivory</span><div class="hexrow"><code>#FFF8EF</code><button data-copy="#fff8ef">Копирай</button></div></div></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Есенна палитра</h2>
+      <p class="intro">Сезонни цветове за есенни кампании и тематични визии.</p>
+      <div class="grid">
+        <article class="swatch"><div class="sample" style="background:#f8f0df"></div><div class="meta"><span class="name">Есенен крем</span><span class="token">--autumn-cream</span><div class="hexrow"><code>#F8F0DF</code><button data-copy="#f8f0df">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#fffaf2"></div><div class="meta"><span class="name">Хартиено бяло</span><span class="token">--autumn-paper</span><div class="hexrow"><code>#FFFAF2</code><button data-copy="#fffaf2">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#edf5e9"></div><div class="meta"><span class="name">Светъл градински чай</span><span class="token">--autumn-sage-light</span><div class="hexrow"><code>#EDF5E9</code><button data-copy="#edf5e9">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#e9f0dd"></div><div class="meta"><span class="name">Градински чай</span><span class="token">--autumn-sage</span><div class="hexrow"><code>#E9F0DD</code><button data-copy="#e9f0dd">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#d6e3c7"></div><div class="meta"><span class="name">Дълбок градински чай</span><span class="token">--autumn-sage-deep</span><div class="hexrow"><code>#D6E3C7</code><button data-copy="#d6e3c7">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#718b57"></div><div class="meta"><span class="name">Маслинено зелено</span><span class="token">--autumn-olive</span><div class="hexrow"><code>#718B57</code><button data-copy="#718b57">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#e87528"></div><div class="meta"><span class="name">Есенен оранж</span><span class="token">--autumn-orange</span><div class="hexrow"><code>#E87528</code><button data-copy="#e87528">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#c76b1e"></div><div class="meta"><span class="name">Тъмен оранж</span><span class="token">--autumn-orange-dark</span><div class="hexrow"><code>#C76B1E</code><button data-copy="#c76b1e">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#b85d2e"></div><div class="meta"><span class="name">Медно</span><span class="token">--autumn-copper</span><div class="hexrow"><code>#B85D2E</code><button data-copy="#b85d2e">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#a64b25"></div><div class="meta"><span class="name">Ръждиво червено</span><span class="token">--autumn-rust</span><div class="hexrow"><code>#A64B25</code><button data-copy="#a64b25">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#d78a36"></div><div class="meta"><span class="name">Златисто</span><span class="token">--autumn-gold</span><div class="hexrow"><code>#D78A36</code><button data-copy="#d78a36">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#75401f"></div><div class="meta"><span class="name">Кестеняво кафяво</span><span class="token">--autumn-brown</span><div class="hexrow"><code>#75401F</code><button data-copy="#75401f">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#693817"></div><div class="meta"><span class="name">Тъмно кафяво</span><span class="token">--autumn-brown-deep</span><div class="hexrow"><code>#693817</code><button data-copy="#693817">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#633315"></div><div class="meta"><span class="name">Дълбоко кафяво</span><span class="token">--autumn-brown-dark</span><div class="hexrow"><code>#633315</code><button data-copy="#633315">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#3f3028"></div><div class="meta"><span class="name">Есенен текст</span><span class="token">--autumn-text</span><div class="hexrow"><code>#3F3028</code><button data-copy="#3f3028">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#302016"></div><div class="meta"><span class="name">Тъмен есенен текст</span><span class="token">--autumn-text-dark</span><div class="hexrow"><code>#302016</code><button data-copy="#302016">Копирай</button></div></div></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Коледна палитра</h2>
+      <p class="intro">Сезонни цветове за зимни и коледни материали.</p>
+      <div class="grid">
+        <article class="swatch"><div class="sample" style="background:#d9edf5"></div><div class="meta"><span class="name">Снежно синьо</span><span class="token">--christmas-snow</span><div class="hexrow"><code>#D9EDF5</code><button data-copy="#d9edf5">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#9fe0e7"></div><div class="meta"><span class="name">Ледено тюркоазено</span><span class="token">--christmas-ice</span><div class="hexrow"><code>#9FE0E7</code><button data-copy="#9fe0e7">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#b9dce9"></div><div class="meta"><span class="name">Синьо за снежинки</span><span class="token">--christmas-flake-blue</span><div class="hexrow"><code>#B9DCE9</code><button data-copy="#b9dce9">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#eaf7fc"></div><div class="meta"><span class="name">Бледно ледено синьо</span><span class="token">--christmas-flake-pale</span><div class="hexrow"><code>#EAF7FC</code><button data-copy="#eaf7fc">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#183c50"></div><div class="meta"><span class="name">Коледно тъмносиньо</span><span class="token">--christmas-navy</span><div class="hexrow"><code>#183C50</code><button data-copy="#183c50">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#244b5d"></div><div class="meta"><span class="name">Коледен текст</span><span class="token">--christmas-text</span><div class="hexrow"><code>#244B5D</code><button data-copy="#244b5d">Копирай</button></div></div></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Допълнителни UI акценти</h2>
+      <p class="intro">Цветове за отделни функционални елементи и връзки; не са водещи бранд цветове.</p>
+      <div class="grid">
+        <article class="swatch"><div class="sample" style="background:#b83280"></div><div class="meta"><span class="name">Розово</span><span class="token">--social-pink</span><div class="hexrow"><code>#B83280</code><button data-copy="#b83280">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#1877f2"></div><div class="meta"><span class="name">Facebook синьо</span><span class="token">--social-facebook</span><div class="hexrow"><code>#1877F2</code><button data-copy="#1877f2">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#f4b400"></div><div class="meta"><span class="name">Златисто за оценка</span><span class="token">--rating-gold</span><div class="hexrow"><code>#F4B400</code><button data-copy="#f4b400">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#1976a8"></div><div class="meta"><span class="name">Синьо за линкове</span><span class="token">--link-blue</span><div class="hexrow"><code>#1976A8</code><button data-copy="#1976a8">Копирай</button></div></div></article>
+        <article class="swatch"><div class="sample" style="background:#0d5278"></div><div class="meta"><span class="name">Тъмно синьо за линкове</span><span class="token">--link-blue-dark</span><div class="hexrow"><code>#0D5278</code><button data-copy="#0d5278">Копирай</button></div></div></article>
+      </div>
+    </section>
+
+    <div class="note"><strong>Важно:</strong> това е справочник на цветовете, които вече са записани като CSS променливи в <code>style.css</code>. Не въвежда нова цветова концепция и не променя дизайна. Прозрачностите и сенките са технически стойности и не са показани като отделни мостри.</div>
+    <footer>IN-VI Kids · Цветова система · Версия 1.0</footer>
+  </main>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(button => {
+      button.addEventListener('click', async () => {
+        const value = button.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(value);
+          const old = button.textContent;
+          button.textContent = 'Копирано';
+          setTimeout(() => button.textContent = old, 1200);
+        } catch {
+          button.textContent = value;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
