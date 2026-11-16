@@ -80,7 +80,13 @@
 
   var flakeCount = isMobile ? 34 : 68;
   var symbols = ['❄', '✦', '❅', '❆', '·'];
-  var flakeColors = ['#ffffff', '#d9edf5', '#b9dce9', '#eaf7fc'];
+  var brandColors = getComputedStyle(document.documentElement);
+  var flakeColors = [
+    brandColors.getPropertyValue('--white').trim(),
+    brandColors.getPropertyValue('--christmas-snow').trim(),
+    brandColors.getPropertyValue('--christmas-flake-blue').trim(),
+    brandColors.getPropertyValue('--christmas-flake-pale').trim()
+  ];
 
   for (var i = 0; i < flakeCount; i++) {
     var flake = document.createElement('span');
